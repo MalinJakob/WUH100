@@ -1,0 +1,61 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  background-color: lightgray;
+}
+
+.wrapper{
+  width: 900px;
+  margin: 0 auto;
+  background-color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+img{
+  height: 100px;
+  width: auto;
+}
+
+h2{
+  color: #804D79;
+}
+h3{
+  color: #262a55;
+}
+
+nav li{
+  display: inline-block;
+  padding: 0 1em ;
+}
+
+.bold-p{
+  font-weight: bold;
+}
+
+.article-footer{
+  font-style: italic;
+}
+
+.main-footer{
+  background-color: darkgray;
+  text-align: center;
+}
+
+.main-footer p{
+  color: yellow;
+  font-size: 2rem ;
+}
+
+@media (max-width: 920px){
+  .wrapper{
+    width: 100%;
+  }
+}
+
+/*
+rem är relativ till rotelementets (html) teckenstorlek.
+em är relativ för dess överordnade elements teckenstorlek.
+Vilket gör att storleken påverkas av den kontainer
+(förälder) elementet befinner sig i.
+*/
