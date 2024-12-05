@@ -53,6 +53,27 @@ nav li{
   }
 }
 
+@media print{
+
+  nav{
+    display: none;
+  }
+
+  .wrapper{
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+  p{
+    font-size: 12pt;
+  }
+  aside{
+    display: none;
+  }
+
+
+
+} 
+
 /*
 rem är relativ till rotelementets (html) teckenstorlek.
 em är relativ för dess överordnade elements teckenstorlek.
