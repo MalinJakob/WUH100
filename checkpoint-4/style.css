@@ -7,6 +7,7 @@
 
 .wrapper{
   max-width: 1300px;
+  box-sizing: border-box; 
 }
 
 body{
@@ -112,6 +113,8 @@ main{
   background-color: hsl(198, 100%, 92%);
   padding: 1em;
   margin-bottom: 2rem;
+  display: grid;
+  justify-items: center;
 }
 
 /*
@@ -121,7 +124,12 @@ section img{
   border-radius: 50%;
   height: 200px;
   width: 200px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
 }
 
 .ingress{
@@ -150,6 +158,14 @@ footer{
   color: #eded6a;
 }
 
+address{
+  font-style: normal;
+}
+
+.cursive{
+  font-style: italic;
+}
+
 footer li{
   list-style: none;
   padding-bottom: 0.15em;
@@ -163,4 +179,37 @@ footer a{
 
 footer a:hover{
   color: white;
+}
+
+@media (max-width: 1320px) {
+  .wrapper {
+    width: 100%;       
+    padding: 10px;   
+  }
+}
+
+@media (max-width: 900px) {
+
+  main {
+    display: grid;
+    grid-template-columns: 1fr, 1fr;
+    grid-template-rows: auto;
+    width: 100%;       
+    padding: 10px;
+    grid-template-areas:
+    "area1 area2"
+    "area3 area4";   
+  }
+
+  footer{
+    display: grid;
+    grid-template-columns: 1fr, 1fr, 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "foot1 foot1 foot1"
+    "foot3 auto foot2";
+    gap: 2rem;
+  }
+
+
 }
