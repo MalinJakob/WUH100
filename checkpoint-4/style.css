@@ -5,17 +5,22 @@
   src: url("fonts/raleway-semibold-webfont.woff") format("woff"), url("fonts/raleway-semibold-webfont.woff2") format("woff2");
 }
 
+body{
+  font-family: Open Sans, sans-serif;
+}
+
 .wrapper{
   max-width: 1300px;
   box-sizing: border-box; 
 }
 
-body{
-  font-family: Open Sans, sans-serif;
-}
-
 h1, h2, h3, h4{
   font-family: raleway, sans-serif;
+}
+
+p{
+  font-size: 90%;
+  line-height: 170%;
 }
 
 header{
@@ -99,17 +104,16 @@ header nav ul li a:hover{
 main{
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr, 1fr, 1fr, 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: auto;
   grid-template-areas:
   "area1 area2 area3 area4";
   gap: 2rem;
-  align-content: center;
-  justify-content: center;
+  
 }
 
 .main-section{
-  width: 220px;
+  width: auto;
   background-color: hsl(198, 100%, 92%);
   padding: 1em;
   margin-bottom: 2rem;
@@ -142,19 +146,17 @@ section img{
   grid-area: foot2;
 }
 #f-section3{
-  grid-area: foot2;
+  grid-area: foot3;
 }
 
 footer{
   padding: 1.5em;
   background-color: #434343;
-  width: 100%;
   display: grid;
-  grid-template-columns: 1fr, 1fr, 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
   grid-template-areas:
   "foot1 foot2 foot3";
-  gap: 2rem;
   color: #eded6a;
 }
 
@@ -190,24 +192,24 @@ footer a:hover{
 
 @media (max-width: 900px) {
 
-  main {
+  main{
     display: grid;
-    grid-template-columns: 1fr, 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     width: 100%;       
-    padding: 10px;
     grid-template-areas:
     "area1 area2"
-    "area3 area4";   
+    "area3 area4";
   }
 
   footer{
+    padding: 0.5em;
     display: grid;
-    grid-template-columns: 1fr, 1fr, 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas:
     "foot1 foot1 foot1"
-    "foot3 auto foot2";
+    "foot2 auto foot3";
     gap: 2rem;
   }
 
