@@ -12,6 +12,8 @@ body{
 .wrapper{
   max-width: 1300px;
   box-sizing: border-box; 
+  margin: 0 auto;
+
 }
 
 h1, h2, h3, h4{
@@ -126,14 +128,10 @@ Kontrast-ratio på mina sektioner är 15.31  */
 
 section img{
   border-radius: 50%;
-  height: 200px;
-  width: 200px;
+  max-width: 80%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: center;
-  justify-items: center;
-  align-items: center;
-  align-content: center;
 }
 
 .ingress{
