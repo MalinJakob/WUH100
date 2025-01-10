@@ -8,10 +8,13 @@
     <meta name="author" content="Malin Jakob" />
     <title>Malin Jakob</title>
     <!-- normalizer CSS reset-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
-<!-- allt innehåll på sidan finns under diven, Wrapper för att lättare kunna 
+  <!-- allt innehåll på sidan finns under diven, Wrapper för att lättare kunna 
  stilsätta huvudinnehållet. Efter det kommer en huvudmenyn tillsammans med företagets logga -->
   <body>
     <div class="wrapper">
@@ -22,78 +25,94 @@
           alt="Logo for the company Slopes Productions, it illustrates a pink mo
     mountain over the text and a snowboard under"
         />
-<!--navigationsmeny-->
+        <!--navigationsmeny-->
         <nav>
           <ul>
             <li><a href="#">HOME</a></li>
             <li><a href="analys.html">ANALYS</a></li>
-            <li><a href="#">BOARDS</a></li>
-            <li><a href="#">SKIES</a></li>
+            <li><a href="#">PRODUCTS</a></li>
+            <li><a href="#">CONTACT</a></li>
           </ul>
         </nav>
       </header>
       <!--sökfält i form av en input så att användaren 
       kan söka efter varor-->
       <div id="searchArea">
-        <input type="text" placeholder="Search.." id="searchBox">
-        <button id="button"> Search</button>
+        <input type="text" placeholder="Search.." id="searchBox" />
+        <button id="searchButton">Search</button>
       </div>
       <!-- plats för bakgrundbild som kommer tillkomma i stilmallen-->
       <div class="background-image">
         <h1>SLOPES</h1>
       </div>
       <main>
-        <section class="main-section" id="section1">
-          <img
-            src="images/skiLift.jpg"
-            alt="Close-up of a blue ski gondola carrying multiple colorful skis on a rack, with snow-capped mountains and a clear blue sky in the background."
-          />
-          <h3>This is one</h3>
-          <p class="ingress">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime modi
-            dolorum eos laudantium animi repellendus ab distinctio vitae saepe
-            aliquam harum laboriosam pariatur incidunt quas dignissimos, culpa
-            eligendi voluptatum architecto.
-          </p>
+        <section id="mainProductSection">
+          <section class="main-section" id="section1">
+            <img
+              src="images/googles.jpg"
+              alt="Close-up of a blue ski gondola carrying multiple colorful skis on a rack, with snow-capped mountains and a clear blue sky in the background."
+            />
+            <h3>Googles</h3>
+            <p>
+              Crystal-clear vision with premium ski goggles. Anti-fog, UV
+              protection, and stylish designs for every adventure.
+            </p>
+            <button class="productButton">See more</button>
+          </section>
+          <section class="main-section" id="section2">
+            <img
+              src="images/skidor.jpg"
+              alt="Close-up of a blue ski gondola carrying multiple colorful skis on a rack, with snow-capped mountains and a clear blue sky in the background."
+            />
+            <h3>Skis</h3>
+            <p>
+              High-performance skis for all skill levels, perfect for carving
+              slopes or exploring backcountry adventures. Precision and durability
+              guaranteed.
+            </p>
+            <button class="productButton">See more</button>
+          </section>
+          <section class="main-section" id="section3">
+            <img
+              src="images/snowboard.jpg"
+              alt="Close-up of a blue ski gondola carrying multiple colorful skis on a rack, with snow-capped mountains and a clear blue sky in the background."
+            />
+            <h3>Snowboard</h3>
+            <p>
+              Discover top-notch snowboards for ultimate control, speed, and
+              style. Ideal for beginners or pros hitting the powder.
+            </p>
+            <button class="productButton">See more</button>
+          </section>
+          <section class="main-section" id="section4">
+            <img
+              src="images/boots.jpg"
+              alt="Close-up of a blue ski gondola carrying multiple colorful skis on a rack, with snow-capped mountains and a clear blue sky in the background."
+            />
+            <h3>Equipment</h3>
+            <p>
+              Gear up with reliable ski and snowboard equipment. From helmets to
+              boots, everything you need for the slopes!
+            </p>
+            <button class="productButton">See more</button>
+          </section>
         </section>
-        <section class="main-section" id="section2">
-          <img
-            src="images/skiLift.jpg"
-            alt="Close-up of a blue ski gondola carrying multiple colorful skis on a rack, with snow-capped mountains and a clear blue sky in the background."
-          />
-          <h3>This is two</h3>
-          <p class="ingress">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime modi
-            dolorum eos laudantium animi repellendus ab distinctio vitae saepe
-            aliquam harum laboriosam pariatur incidunt quas dignissimos, culpa
-            eligendi voluptatum architecto.
-          </p>
-        </section>
-        <section class="main-section" id="section3">
-          <img
-            src="images/skiLift.jpg"
-            alt="Close-up of a blue ski gondola carrying multiple colorful skis on a rack, with snow-capped mountains and a clear blue sky in the background."
-          />
-          <h3>This is three</h3>
-          <p class="ingress">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime modi
-            dolorum eos laudantium animi repellendus ab distinctio vitae saepe
-            aliquam harum laboriosam pariatur incidunt quas dignissimos, culpa
-            eligendi voluptatum architecto.
-          </p>
-        </section>
-        <section class="main-section" id="section4">
-          <img
-            src="images/skiLift.jpg"
-            alt="Close-up of a blue ski gondola carrying multiple colorful skis on a rack, with snow-capped mountains and a clear blue sky in the background."
-          />
-          <h3>This is four</h3>
-          <p class="ingress">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime modi
-            dolorum eos laudantium animi repellendus ab distinctio vitae saepe
-            aliquam harum laboriosam pariatur incidunt quas dignissimos, culpa
-            eligendi voluptatum architecto.
-          </p>
+        <section id="newsletter">
+          <header id="labelNewsletter">
+            <h3 >Subscribe to our newsletter!</h3>
+          </header>
+          <p>Stay ahead on the slopes! Subscribe to Slopes Productions’ newsletter for exclusive deals on top-quality gear, insider tips, and expert advice. Be the first to know about new arrivals, seasonal sales, and events. Whether you're a skier or snowboarder, our updates keep you ready for every adventure. Sign up today!</p>
+          <!-- använing av form för att skapa input som användaren kan använda för att 
+           registera sig till ett nyhetsbrev-->
+          <form id="signUp">
+            <fieldset>
+              <label for="name">Name</label>
+              <input type="text" required name="name" id="name"><br><br>
+              <label for="firstName">Email</label>
+              <input type="email" required name="email" id="email">
+              <input type="submit" name="submit" id="submit">
+            </fieldset>
+          </form>
         </section>
       </main>
       <footer>
@@ -104,7 +123,7 @@
             Adddressroad 1 <br />
             Gothenburg
           </address>
-        </section >
+        </section>
         <section id="f-section2">
           <h4>Navigation</h4>
           <nav class="footer-nav">
@@ -112,7 +131,7 @@
               <li><a href="#">HOME</a></li>
               <li><a href="analys.html">ANALYS</a></li>
               <li><a href="#">BOARDS</a></li>
-              <li><a href="#">SKIES</a></li>
+              <li><a href="#">SKIS</a></li>
             </ul>
           </nav>
         </section>
