@@ -23,7 +23,7 @@
           id="logo"
           src="images/LogotypSlopesProduction.png"
           alt="Logo for the company Slopes Productions, it illustrates a pink mo
-    mountain over the text and a snowboard under"
+      mountain over the text and a snowboard under"
         />
         <!--navigationsmeny-->
         <nav>
@@ -36,7 +36,7 @@
         </nav>
       </header>
       <!--sökfält i form av en input så att användaren 
-      kan söka efter varor-->
+        kan söka efter varor-->
       <div id="searchArea">
         <input type="text" placeholder="Search.." id="searchBox" />
         <button id="searchButton">Search</button>
@@ -46,13 +46,29 @@
         <h1>SLOPES</h1>
       </div>
       <main>
+        <section id="welcomeP">
+          <header>
+            <h2>Welcome!</h2>
+          </header>
+          <p>
+            At Slopes Productions, we’re passionate about fueling your
+            adventures on the slopes. Whether you’re carving down pristine
+            powder, mastering tricks in the park, or enjoying a peaceful
+            backcountry trek, we’re here to equip you with the best. Explore our
+            premium range of skis, snowboards, goggles, and equipment, crafted
+            to elevate your performance and style. With a dedication to quality,
+            innovation, and your love for the mountains, Slopes Productions is
+            your partner in every thrilling descent. Gear up, explore, and
+            conquer the slopes with us—because the mountains are calling!
+          </p>
+        </section>
         <section id="mainProductSection">
           <section class="main-section" id="section1">
             <img
               src="images/googles.jpg"
               alt="Close-up of a blue ski gondola carrying multiple colorful skis on a rack, with snow-capped mountains and a clear blue sky in the background."
             />
-            <h3>Googles</h3>
+            <h2>Googles</h2>
             <p>
               Crystal-clear vision with premium ski goggles. Anti-fog, UV
               protection, and stylish designs for every adventure.
@@ -64,11 +80,11 @@
               src="images/skidor.jpg"
               alt="Close-up of a blue ski gondola carrying multiple colorful skis on a rack, with snow-capped mountains and a clear blue sky in the background."
             />
-            <h3>Skis</h3>
+            <h2>Skis</h2>
             <p>
               High-performance skis for all skill levels, perfect for carving
-              slopes or exploring backcountry adventures. Precision and durability
-              guaranteed.
+              slopes or exploring backcountry adventures. Precision and
+              durability guaranteed.
             </p>
             <button class="productButton">See more</button>
           </section>
@@ -77,7 +93,7 @@
               src="images/snowboard.jpg"
               alt="Close-up of a blue ski gondola carrying multiple colorful skis on a rack, with snow-capped mountains and a clear blue sky in the background."
             />
-            <h3>Snowboard</h3>
+            <h2>Snowboard</h2>
             <p>
               Discover top-notch snowboards for ultimate control, speed, and
               style. Ideal for beginners or pros hitting the powder.
@@ -89,7 +105,7 @@
               src="images/boots.jpg"
               alt="Close-up of a blue ski gondola carrying multiple colorful skis on a rack, with snow-capped mountains and a clear blue sky in the background."
             />
-            <h3>Equipment</h3>
+            <h2>Equipment</h2>
             <p>
               Gear up with reliable ski and snowboard equipment. From helmets to
               boots, everything you need for the slopes!
@@ -99,18 +115,24 @@
         </section>
         <section id="newsletter">
           <header id="labelNewsletter">
-            <h3 >Subscribe to our newsletter!</h3>
+            <h2 id="subscribe">Subscribe to our newsletter!</h2>
           </header>
-          <p>Stay ahead on the slopes! Subscribe to Slopes Productions’ newsletter for exclusive deals on top-quality gear, insider tips, and expert advice. Be the first to know about new arrivals, seasonal sales, and events. Whether you're a skier or snowboarder, our updates keep you ready for every adventure. Sign up today!</p>
+          <p>
+            Stay ahead on the slopes! Subscribe to Slopes Productions’
+            newsletter for exclusive deals on top-quality gear, insider tips,
+            and expert advice. Be the first to know about new arrivals, seasonal
+            sales, and events. Whether you're a skier or snowboarder, our
+            updates keep you ready for every adventure. Sign up today!
+          </p>
           <!-- använing av form för att skapa input som användaren kan använda för att 
            registera sig till ett nyhetsbrev-->
           <form id="signUp">
             <fieldset>
               <label for="name">Name</label>
-              <input type="text" required name="name" id="name"><br><br>
+              <input type="text" required name="name" id="name" />
               <label for="firstName">Email</label>
-              <input type="email" required name="email" id="email">
-              <input type="submit" name="submit" id="submit">
+              <input type="email" required name="email" id="email" />
+              <input type="submit" name="submit" id="submit" />
             </fieldset>
           </form>
         </section>
