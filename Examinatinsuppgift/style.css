@@ -1,13 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-
+/*deklarerar fonts till webbplatsen taget från Font Squirrel*/
 @font-face{
-  font-family: raleway;
-  src: url("fonts/raleway-semibold-webfont.woff") format("woff"), url("fonts/raleway-semibold-webfont.woff2") format("woff2");
+  font-family: selawik;
+  src: url("fonts/selawk-webfont.woff") format("woff"), url("fonts/selawk-webfont.woff2") format("woff2");
 }
 
+@font-face{
+  font-family: selawikb;
+  src: url("fonts/selawksb-webfont.woff")format("woff"), url("fonts/selawksb-webfont.woff2") format("woff2");
+}
 
+/*deklarerar vilken font, och fonstorlek som ska vara i all brödtext på webbplatsen*/
 body{
-  font-family: Open Sans, sans-serif;
+  font-family: selawik, sans-serif;
   font-size: 90%;
 }
 /* max bredd för huvudinnehållet till 1300 px, border box för att 
@@ -21,13 +25,13 @@ body{
 
 /*huvudfont på rubriker*/
 h1, h2, h3, h4{
-  font-family: raleway, sans-serif;
+  font-family: selawikb, sans;
 }
 
 /*färg och stilval på huvudrubriken på sidan*/
 h1{
   color: #2d95c9;
-  font-size: 300%;
+  font-size: 200%;
   letter-spacing: 0.3em;
   text-shadow:  0 2px 6px rgba(174, 54, 54, 0.1);
 }
@@ -209,17 +213,76 @@ section img{
   display: flex;
   justify-content: center;
 }
+
+.productButton a{
+  text-decoration: none;
+  color: white;
+}
+
+
 /*sökknapp för att ta sig vidare till produkterna */
 .productButton{
+  text-decoration:none ;
   background-color: #e585b0 ;
   border: none;
   border-radius: 5px;
   padding: 0.5em;
-  color: white;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .productButton:hover{
+  background-color: #2d95c9;
+  cursor: pointer;
+}
+
+#productMainHeader{
+  justify-self: center;
+}
+
+.productHeader{
+  justify-self: center;
+  letter-spacing: 0.2em;
+}
+.productContainer{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  justify-items: center;
+  padding: 1em;
+  margin-bottom: 2em;
+}
+
+.productContainer img {
+  width: 60%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  justify-self: center;
+  margin-top: 1.5em;
+}
+
+article{
+  text-align: center;
+}
+
+.product{
+ background-color:  #d7f2ff9f;
+ border-radius: 5px;
+ margin-left: 1em;
+ margin-right: 1em;
+}
+
+.buyButton{
+  background-color: #e585b0 ;
+  border: none;
+  border-radius: 5px;
+  padding: 0.7em;
+  color: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1em;
+}
+
+.buyButton:hover{
   background-color: #2d95c9;
   cursor: pointer;
 }
