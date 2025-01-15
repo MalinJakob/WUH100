@@ -41,6 +41,10 @@ h2{
   text-shadow:  0 1px 3px rgba(174, 54, 54, 0.1);
 }
 
+h4{
+  color: #2d95c9;
+}
+
 #subscribe{
   color: white;
 }
@@ -342,32 +346,54 @@ input{
 
 #f-section1{
   grid-area: foot1;
+  justify-items: center;
 }
 #f-section2{
   grid-area: foot2;
+  justify-items: center;
 }
+
+#f-section2 li{
+  margin-bottom: 0.7em;
+}
+
+#f-section2 a{
+  color: black;
+  letter-spacing: 0.1em;
+  font-family: selawikb, sans;
+}
+
+#f-section2 a:hover{
+  color: #e585b0
+}
+
 #f-section3{
   grid-area: foot3;
+  justify-items: center;
 }
+
 
 footer{
   padding: 1.5em;
-  background-color: #434343;
+  background-color: #D7F2FF;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
   grid-template-areas:
   "foot1 foot2 foot3";
-  color: #eded6a;
+
 }
 
 address{
   font-style: normal;
+  text-align: center;
 }
 
 .cursive{
   font-style: italic;
 }
+
+
 
 footer li{
   list-style: none;
@@ -375,7 +401,6 @@ footer li{
 }
 
 footer a{
-  color: #eded6a;
   text-decoration: none;
   letter-spacing: 0.1em;
 }
@@ -468,5 +493,26 @@ footer a:hover{
     "area3"
     "area4";
     margin-bottom: 1em;
+  }
+
+  article{
+    margin-bottom: 1em;
+  }
+
+  .productContainer{
+    grid-template-columns: 1fr;
+  }
+
+  footer{
+    padding: 0.5em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "foot1 foot1"
+    "foot2 foot2"
+    "foot3 foot3";
+    gap: 2rem;
+    justify-items: center;
   }
 }
