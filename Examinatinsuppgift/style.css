@@ -22,8 +22,8 @@ body{
   font-family: selawik, sans-serif;
   font-size: 90%;
   scroll-padding-top: 100px;
-
 }
+
 /* max bredd för huvudinnehållet till 1300 px, border box för att 
  storleken på boxen ska förbli desamma, margin för att förhålla sig till 
  center av sin föräldrar container  */
@@ -55,16 +55,14 @@ h4{
   color: #2d95c9;
 }
 
-#subscribe{
-  color: white;
-}
 
 /*sätter textstorleken på alla paragraf samtlinjehöjden */
 p{
   line-height: 170%;
   text-align: center;
+  width: 90%;
 }
- 
+
 header{
   display: flex;
   justify-content: space-between;
@@ -73,7 +71,6 @@ header{
   margin-top: 1em;
   margin-bottom: 1em;
 }
-
 
 #logo{
   height: 80px;
@@ -115,43 +112,28 @@ header nav ul li:hover{
 }
 
 header nav ul li a:hover{
- color: antiquewhite;
+  color: antiquewhite;
 }
 
-/*grid för att centrera både sökfältet & knappen i mitten av sidan */
+/*grid för att centrera sökfältet i mitten av sidan */
 #searchArea{
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto;
   justify-content: center;
-  align-items: center;
-  gap: 1em;                     
+  align-items: center;                 
   margin: 2rem auto; 
 }
 
 /*sökfält som placeras i mitten av sidan brevid söknappen*/
 #searchBox{
   width: 70vw;
+  height: 20px;
   border: hsl(333, 65%, 71%) solid 1px;
   border-radius: 5px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   padding: 0.5em;
+  text-align: start;
 }
-
-/*sökfält som placeras i mitten acv sidan */
-#searchButton{
-  background-color: #2d95c9;
-  border: none;
-  padding: 0.5em;
-  border-radius: 5px;
-  color: white;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-/*hover effekt för att visa att den går att trycka på */
-#searchButton:hover{
-  background-color: hsl(333, 65%, 71%) ;
-  cursor: pointer;
-}
-
 
 .background-image{
   height: 300px;
@@ -170,6 +152,7 @@ main{
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
+  margin: 2em;
 }
 
 #welcomeP{
@@ -263,7 +246,6 @@ section img{
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
   justify-items: center;
-  padding: 1em;
   margin-bottom: 2em;
 }
 
@@ -281,10 +263,10 @@ article{
 }
 
 .product{
- background-color:  #d7f2ff9f;
- border-radius: 5px;
- margin-left: 1em;
- margin-right: 1em;
+  background-color:  #dff2fc9f;
+  border-radius: 5px;
+  margin-left: 1em;
+  margin-right: 1em;
 }
 
 .buyButton{
@@ -311,6 +293,18 @@ article{
   font-size: 115%;
 }
 
+#subscribe{
+  color: white;
+  text-align: center;
+}
+
+#labelNewsletter{
+  margin-bottom: 2em;
+}
+#newLetterP{
+  width: 60%;
+  justify-self: center;
+} 
 #labelNewsletter{
   display: grid;
   justify-content: center;
@@ -354,6 +348,7 @@ input:focus{
   padding: 1em;
   text-align: center;
   justify-self: center;
+  margin-top: 1em;
 }
 
 #submit:hover{
@@ -498,7 +493,9 @@ footer a:hover{
     "area3 area4";
   }
 
-
+  #newLetterP{
+    width: 80%;
+  } 
 
   footer{
     padding: 0.5em;
@@ -519,10 +516,6 @@ footer a:hover{
     font-size: 130%;
   }
 
-  #searchBox{
-    width: 70vw;
-  }
-
   header nav ul{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -531,6 +524,7 @@ footer a:hover{
     text-align: center;
     font-size: 80%;
   }
+
   .main-section{
     padding: 0.5em;
     margin-bottom: 0.2em;
@@ -555,6 +549,10 @@ footer a:hover{
 
   .productContainer{
     grid-template-columns: 1fr;
+  }
+
+  #newLetterP{
+    width: 90%;
   }
 
   footer{
