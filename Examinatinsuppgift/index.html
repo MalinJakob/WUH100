@@ -13,6 +13,10 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
     />
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
   <!-- allt innehåll på sidan finns under diven, Wrapper för att lättare kunna 
  stilsätta huvudinnehållet. Efter det kommer en huvudmenyn tillsammans med företagets logga -->
@@ -30,7 +34,7 @@
           <ul>
             <li><a href="#">HOME</a></li>
             <li><a href="analys.html">ANALYS</a></li>
-            <li><a href="#">PRODUCTS</a></li>
+            <li><a href="#scrollTargetProduct">PRODUCTS</a></li>
             <li><a href="#">CONTACT</a></li>
           </ul>
         </nav>
@@ -69,7 +73,8 @@
             <h2>Goggles</h2>
             <p>
               Crystal-clear vision with premium ski goggles. Anti-fog, UV
-              protection, and stylish designs for every adventure.
+              protection, and stylish designs for every adventure. Exist in all
+              shapes, colors and design!
             </p>
             <button class="productButton">
               <a href="#scrollTarget1">See more</a>
@@ -97,8 +102,9 @@
             />
             <h2>Snowboard</h2>
             <p>
-              Discover top-notch snowboards for ultimate control, speed, and
-              style. Ideal for beginners or pros hitting the powder.
+              Top-notch snowboards for ultimate control, speed, and style. Ideal
+              for hitting the powder. Transform your mountain
+              experience with our high-performance split boards.
             </p>
             <button class="productButton">
               <a href="#scrollTarget3">See more</a>
@@ -111,8 +117,9 @@
             />
             <h2>Equipment</h2>
             <p>
-              Gear up with reliable ski and snowboard equipment. From helmets to
-              boots, everything you need for the slopes!
+              Gear up with reliable ski and snowboard equipment. Everything to keep you
+              warm and safe in the slope. From helmets to boots, everything you
+              need for the slopes!
             </p>
             <button class="productButton">
               <a href="#scrollTarget4">See more</a>
@@ -121,10 +128,10 @@
         </section>
         <section>
           <header id="productMainHeader">
-            <h1>PRODUCTS</h1>
+            <h1 class="scrollTarget" id="scrollTargetProduct">PRODUCTS</h1>
           </header>
           <article class="productContainer">
-            <article class="product" id="scrollTarget1">
+            <article class="product" class="scrollTarget" id="scrollTarget1">
               <img
                 src="images/goggles1.jpg"
                 alt="Person wearing a black hoodie and orange ski goggles in the snow."
@@ -153,7 +160,7 @@
             </article>
           </article>
           <article class="productContainer">
-            <article class="product" id="scrollTarget2">
+            <article class="product" class="scrollTarget" id="scrollTarget2">
               <img
                 src="images/ski1.jpg"
                 alt="A dramatic aerial ski jump against a bright blue sky, with a skier performing a trick on Tyrolia skis. Snow-covered mountain peaks and a ski lodge are visible in the background."
@@ -182,7 +189,7 @@
             </article>
           </article>
           <article class="productContainer">
-            <article class="product" id="scrollTarget3">
+            <article class="product" class="scrollTarget" id="scrollTarget3">
               <img
                 src="images/snowboard1.jpg"
                 alt="A snowboarder in a bright yellow jacket and black beanie stands at the top of a snow-covered slope, holding a snowboard with colorful red and purple graphics. In the background, a vast winter landscape of snow-covered evergreen forest stretches into the distance at dusk."
@@ -211,6 +218,32 @@
               <button class="buyButton">Buy</button>
             </article>
           </article>
+          <article class="productContainer">
+            <article class="product" class="scrollTarget" id="scrollTarget4">
+              <img
+                src="images/eq1.jpg"
+                alt="Person wearing a black hoodie and orange ski goggles in the snow."
+              />
+              <h3>Ski Boots</h3>
+              <h4>90€</h4>
+              <button class="buyButton">Buy</button>
+            </article>
+            <article class="product">
+              <img src="images/eq2.jpg" alt="Pink ski goggles on a table." />
+              <h3>Helmet</h3>
+              <h4>75€</h4>
+              <button class="buyButton">Buy</button>
+            </article>
+            <article class="product">
+              <img
+                src="images/eq3.jpg"
+                alt="Person in an Oakley outfit and blue ski goggles in sunlight."
+              />
+              <h3>Ski Poles</h3>
+              <h4>60€</h4>
+              <button class="buyButton">Buy</button>
+            </article>
+          </article>
         </section>
         <section id="newsletter">
           <header id="labelNewsletter">
@@ -231,7 +264,7 @@
               <input type="text" required name="name" id="name" />
               <label for="firstName">Email</label>
               <input type="email" required name="email" id="email" />
-              <input type="submit" name="submit" id="submit" />
+              <input type="submit" name="submit" id="submit" value="Send"/>
             </fieldset>
           </form>
         </section>
@@ -265,6 +298,18 @@
             grown from a small local shop to a leading provider of premium
             snowboarding and skiing gear.
           </p>
+        </section>
+        <section id="f-section4" class="social-media social-media-icons">
+          <a
+            href="https://www.facebook.com/malin.jakob"
+            target="_blank"
+            class="fa fa-facebook"
+          ></a>
+          <a
+            href="https://www.instagram.com/malinjakob/"
+            target="_blank"
+            class="fa fa-instagram"
+          ></a>
         </section>
       </footer>
     </div>

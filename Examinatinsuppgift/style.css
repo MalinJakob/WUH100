@@ -9,10 +9,20 @@
   src: url("fonts/selawksb-webfont.woff")format("woff"), url("fonts/selawksb-webfont.woff2") format("woff2");
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
+.scrollTarget{
+  scroll-margin-top: 1em;
+}
+
 /*deklarerar vilken font, och fonstorlek som ska vara i all brödtext på webbplatsen*/
 body{
   font-family: selawik, sans-serif;
   font-size: 90%;
+  scroll-padding-top: 100px;
+
 }
 /* max bredd för huvudinnehållet till 1300 px, border box för att 
  storleken på boxen ska förbli desamma, margin för att förhålla sig till 
@@ -63,6 +73,7 @@ header{
   margin-top: 1em;
   margin-bottom: 1em;
 }
+
 
 #logo{
   height: 80px;
@@ -323,7 +334,13 @@ input{
   height: 2.5vw;
   border: #2d95c9 solid 1px;
   border-radius: 5px;
+  text-align: center;
 }
+
+input:focus{
+  background-color: #a6d8f0;
+}
+
 
 #submit{
   background-color: #2d95c9;
@@ -332,9 +349,11 @@ input{
   color: white;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   width: 20%;
+  min-width: 100px;
   line-height: 0;
-  padding: 0.5em;
+  padding: 1em;
   text-align: center;
+  justify-self: center;
 }
 
 #submit:hover{
@@ -372,6 +391,16 @@ input{
   justify-items: center;
 }
 
+#f-section4{
+  grid-area: foot4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  padding-top: 20px;
+}
+
 
 footer{
   padding: 1.5em;
@@ -380,19 +409,14 @@ footer{
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
   grid-template-areas:
-  "foot1 foot2 foot3";
-
+  "foot1 foot2 foot3"
+  "foot4 foot4 foot4";
 }
 
 address{
   font-style: normal;
   text-align: center;
 }
-
-.cursive{
-  font-style: italic;
-}
-
 
 
 footer li{
@@ -407,6 +431,38 @@ footer a{
 
 footer a:hover{
   color: white;
+}
+
+.social-media .fa{
+  padding: 10px;
+  font-size: 20px;
+  width: 20px;
+  border-radius: 50%;
+  text-decoration: none;
+  margin: 5px 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social-media .fa-facebook {
+  background: #3B5998;
+  color: white;
+  text-decoration: none;
+}
+
+.social-media .fa-instagram {
+  background: #983b7b;
+  color: white;
+  text-decoration: none;
+}
+
+.social-media .fa-facebook:hover {
+  background: #2d95c9;
+}
+
+.social-media .fa-instagram:hover{
+  background: #2d95c9;
 }
 
 @media (max-width: 1320px) {
@@ -442,10 +498,7 @@ footer a:hover{
     "area3 area4";
   }
 
-  #submit{
-    width: 20%;
-    padding: 1em;
-  }
+
 
   footer{
     padding: 0.5em;
@@ -454,7 +507,8 @@ footer a:hover{
     grid-template-rows: auto;
     grid-template-areas:
     "foot1 foot1 foot1"
-    "foot2 auto foot3";
+    "foot2 auto foot3"
+    "foot4 auto foot4";;
     gap: 2rem;
   }
 }
@@ -511,7 +565,8 @@ footer a:hover{
     grid-template-areas:
     "foot1 foot1"
     "foot2 foot2"
-    "foot3 foot3";
+    "foot3 foot3"
+    "foot4 foot4";;
     gap: 2rem;
     justify-items: center;
   }
