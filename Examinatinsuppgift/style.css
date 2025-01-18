@@ -410,13 +410,18 @@ footer{
 
 address{
   font-style: normal;
-  text-align: center;
+  justify-items: center;
 }
 
+footer ul{
+  padding-left: 0;
+  justify-items: center;
+}
 
 footer li{
   list-style: none;
   padding-bottom: 0.15em;
+
 }
 
 footer a{
