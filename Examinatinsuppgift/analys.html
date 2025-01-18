@@ -1,35 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- meta tags för att tillhandhålla metaa data om webbplatsen och länkar till style sheeten-->
+  <!-- meta tags för att tillhandahålla information om datan angående webbplatsen och länkar till stilmallar-->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Examinationsuppgift" />
     <meta name="author" content="Malin Jakob" />
-    <title>Malin Jakob</title>
-    <!-- normalizer CSS reset-->
+    <title>Slopes Production</title>
+    <!-- normalizer för CSS reset-->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
     />
+    <!-- Egna stilmallen-->
     <link rel="stylesheet" href="style.css" />
+    <!-- en stilmallslänk för att få tillgång till sociala media iconer-->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
   </head>
-  <!-- allt innehåll på sidan finns under diven, Wrapper för att lättare kunna 
- stilsätta huvudinnehållet. Efter det kommer en huvudmenyn tillsammans med företagets logga -->
   <body>
+    <!-- allt innehåll på sidan finns under en div låda (Wrapper)  för att lättare kunna 
+   stilsätta huvudinnehållet. -->
     <div class="wrapper">
-      <header>
+     <!--  header med företagets logga, med en bild och formatet PNG eftersom det är en logga och en huvudmenyn -->
+      <header class="mainHeader">
         <img
           id="logo"
           src="images/LogotypSlopesProduction.png"
           alt="Logo for the company Slopes Productions, it illustrates a pink mo
       mountain over the text and a snowboard under"
         />
-        <!--navigationsmeny-->
+        <!--navigationsmeny, skapad med en ostruturerad lista med list items som varje
+        item har en anchor som är antigen har en relativ länk till en sida på webbplatsen 
+        eller en id target, och en utan någon destination -->
         <nav>
           <ul>
             <li><a href="index.html">HOME</a></li>
@@ -39,35 +44,39 @@
           </ul>
         </nav>
       </header>
-      <main>
-        <section>
-          <header>
-            <h1>ANALYS</h1>
-          </header>
-          
-        </section>
+      <main id="analysMain">
+        <header>
+          <h1>Analys</h1>
+        </header>
+        <h2 class="analysHeader"> Inledning</h2>
       </main>
+      <!-- Footern på sidan som är indelad i 3 sektioner och en div låda, varje sektion har ett id som 
+       sedan är kopplar till grid area i stilmallen-->
       <footer>
+        <!-- första sektionen är all information kopplat till kontakt information-->
         <section id="f-section1">
-          <address>
+          <!-- allt innehåll kring kontakt infon är samlat här, i en paragraf & rubrik
+           för att skapa enklare struktur/stil på informationen-->
             <h4>Contact Us</h4>
             <p>Main Store: 1234 Mountain View Drive, Aspen, CO 81611</p>
             <p>Customer Service: 1-800-SLOPES-PRO</p>
             <p>Email: info@slopesproduction.com</p>
             <p>Hours: Mon-Sat 8AM-8PM MST, Sun 9AM-6PM MST</p>
-          </address>
         </section>
+        <!--andra sektionen är en vertikal naavigationsbar, i form av ostrukurerad lista me dlist items, där varje
+        list item har en anchor tag till en relativlänk, id target eller inget. -->
         <section id="f-section2">
           <h4>Navigation</h4>
           <nav class="footer-nav">
             <ul>
-              <li><a href="#">HOME</a></li>
+              <li><a href="index.html">HOME</a></li>
               <li><a href="analys.html">ANALYS</a></li>
-              <li><a href="#">PRODUCTS</a></li>
+              <li><a href="#scrollTargetProduct">PRODUCTS</a></li>
               <li><a href="#">CONTACT</a></li>
             </ul>
           </nav>
         </section>
+        <!-- tredje sektionen är kort information kring företaget, med egen rubrik och paragraf-->
         <section id="f-section3">
           <h4>About Slopes Production</h4>
           <p>
@@ -77,18 +86,20 @@
             snowboarding and skiing gear.
           </p>
         </section>
-        <section id="f-section4" class="social-media social-media-icons">
+        <!-- Div lådan är sociala media iconer och vart de länkar till. En div låda
+         eftersom det är innehåll utan rubrik -->
+        <div id="f-section4" class="social-media social-media-icons">
           <a
-            href="https://www.facebook.com/malin.jakob"
+            href="https://www.facebook.com"
             target="_blank"
             class="fa fa-facebook"
           ></a>
           <a
-            href="https://www.instagram.com/malinjakob/"
+            href="https://www.instagram.com"
             target="_blank"
             class="fa fa-instagram"
           ></a>
-        </section>
+        </div>
       </footer>
     </div>
   </body>
