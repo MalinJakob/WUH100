@@ -136,7 +136,7 @@ header nav ul li a:hover{
   margin: 2rem auto; 
 }
 
-/* fixerad höjd och bredd så att den tar upp 70 delar av den aktuella skärmstorleken, detta
+/* fixerad höjd och bredd så att den tar upp 70% av den aktuella skärmstorleken, detta
 gör den skalbar när skärmstorleken ökar eller minskar. Stil för hur själva sökrutan ska se
 ut med kant som har rundade hörn och en skugga så att den ser ut att "sticka" fram mer. */
 #searchBox{
@@ -160,23 +160,27 @@ behållaren och center för att centera bilden i mitten. */
   color:#2E2C45 ;
 }
 
+
+/*centerar allt innehåll i main och en mairgnal åt alla håll för att skapa
+lite tomrum*/
 main{
-  display: grid;
-  grid-template-columns: 1fr;
   justify-items: center;
   margin: 2em;
 }
 
+/*centerar välkomst/huvudinformationen, sätter bredden till 70% av den 
+aktuella skärmlängden, marginal ovan och ubnnder för att skapa andrum och 
+font storlek till 120%   */
 #welcomeP{
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto;
   justify-items: center;
-  margin-bottom: 2em;
+  margin-bottom: 3em;
+  margin-top: 3em;
   width: 70vw;
   font-size: 120%;
 }
 
+/* använder id från HTML filen för att definera namnet på vad den delen 
+ska kallas i grid area*/
 #section1{
   grid-area: area1;
 }
@@ -190,9 +194,9 @@ main{
   grid-area: area4;
 }
 
-/*skapa fyra stycken kolumner för att presentera produkter  */
+/*skapa fyra stycken kolumner med grids för att presentera översikten av produkterna med
+ett glapp för att skapa mellarum mellan varje sektion */
 #mainProductSection{
-  width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: auto;
@@ -201,8 +205,8 @@ main{
   gap: 2rem;
 }
 
-
-/*skapa */
+/* tillägger en bredd med auto för att sektionerna ska skala jämnt, sedan en bakgrundfärg, 
+marginaler för andrum och centerar objekten i mitten */
 .main-section{
   width: auto;
   background-color: hsl(198, 100%, 92%);
@@ -212,10 +216,9 @@ main{
   justify-items: center;
 }
 
-
-/*
-Kontrast-ratio på mina sektioner är 15.31  */ 
-
+/* tiillsätter egenskaper på bilderna som finns i sektioner för att justera
+max bredden på bilderna, i procent så de är skalbara, sedan en skugga bakom för 
+att få bilden att "pop-out" mer samt centrera bilden i mitten*/ 
 section img{
   border-radius: 5px;
   max-width: 80%;
@@ -224,56 +227,67 @@ section img{
   justify-content: center;
 }
 
+/* textfärg och textdekoration för sökknapp för att ta sig vidare till produkterna */
 .productButton a{
   text-decoration: none;
   color: white;
 }
 
 
-/*sökknapp för att ta sig vidare till produkterna */
+/* bakgrundsfärg på sökknapp , med rundade hörn på kanterna, 
+centerar textinnehållet och skugga för att få en "pop-out" effekt*/
 .productButton{
-  text-decoration:none ;
   background-color: #e585b0 ;
-  border: none;
   border-radius: 5px;
   padding: 0.5em;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  align-content: center
 }
 
+/*pseudo-class för att skapa en hover effekt när muspekaren är över knappen, 
+då ändras bakgrundfärgen samt muspekaren till en pointer, vilket indikerar
+att den går att trycka på */
 .productButton:hover{
   background-color: #2d95c9;
   cursor: pointer;
 }
 
+/* centerar produkt rubriken, margninler för att visa att en ny del börjar och 
+att skapa mer andrum*/
 #productMainHeader{
   justify-self: center;
+  margin-top: 3em;
+  margin-bottom: 2em;
 }
 
-.productHeader{
-  justify-self: center;
-  letter-spacing: 0.2em;
-}
+/* anvädner grid frö att skapa 3 st kolumner och sätter en marginal under för att
+skapa andrum till nästa sektion */
 .productContainer{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
-  justify-items: center;
-  margin-bottom: 2em;
+  margin-bottom: 3em;
 }
 
+/* sätter bilderna till 60% för att de inte ska ta upp för stor plats i div lådan,
+sedan skapa runda kanter på bilderna för att få ett mjukare intryck, en skugga för 
+"pop-out" effekt, centerar bilden i mitten och sedan ger en marginal ovan för 
+att bilden inte ska sitta i kant med höjden av div lådan utan skapar andrum  */
 .productContainer img {
   width: 60%;
-  height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   justify-self: center;
   margin-top: 1.5em;
 }
 
+/*centerar all text i artiklar */
 article{
   text-align: center;
 }
 
+/*sätter en bakgrundfärg på produkt artikalrna, en rundad kant och marginaler 
+åt båda sidorna*/
 .product{
   background-color:  #dff2fc9f;
   border-radius: 5px;
@@ -281,6 +295,8 @@ article{
   margin-right: 1em;
 }
 
+/* stilsättter bakgrundsfärg till köp knappen, rundade hörn, mellanrum runt texten,
+vilken färg texten ska vara, skugga för "pop-out" effekt och marginal under knappen*/
 .buyButton{
   background-color: #e585b0 ;
   border: none;
@@ -291,11 +307,16 @@ article{
   margin-bottom: 1em;
 }
 
+/*sätter en pseudo-class för att skapa en hover effekt där bakgrundfärgen och
+muspekaren ändras för att indikera att det är en knapp som går att trycka på*/
 .buyButton:hover{
   background-color: #2d95c9;
   cursor: pointer;
 }
 
+/*sätter en bakgrundbild för hela sektionen för att rama in innehållet, gör bakgrunden
+lite mindre opacitet, sätter färg på texten, gör att innehållet har ett sttörre andrum
+till kanntarna och sätter egen font stolek */
 #newsletter{
   background-color: #e585b0;
   opacity: 80%;
@@ -305,34 +326,44 @@ article{
   font-size: 115%;
 }
 
+/*ändrar denna rubrik till en annan färgen och centerar texten i mitten av sektionen*/
 #subscribe{
   color: white;
   text-align: center;
 }
 
+/* marginal under för att skapa ett större andrum och olika fokus mellan
+rubriken och texten i denna sektion */
 #labelNewsletter{
-  margin-bottom: 2em;
+  margin-bottom: 3em;
 }
+
+/* sätter att texten endast ska upp 60% av sektionen för att samla innehållet 
+och sedan centera det till mitten*/
 #newLetterP{
   width: 60%;
   justify-self: center;
 } 
-#labelNewsletter{
-  display: grid;
-  justify-content: center;
-}
 
+/*ser till att formuläret inte har någon kant, och med grids skapa
+en kolumn så att allt inom fieldsetet ska läggas under varandra */
 fieldset{
   border: none;
   display: grid;
   grid-template-columns: 1fr;
 }
 
+/* centerar rubriken för varje input och ger en marginal undetill för 
+att skapa andrum*/
 label{
   text-align: center;
   margin-bottom: 0.5em;
 }
 
+/*sätter att inputen ska vara 50% av sektionens bredd för att samla innehållet
+mer i mitten, cetnerar dem i mitten, sätter en höjd som gör den skalbar efter
+skärmensbredd, en rundad kant för en mjuka känsla med en blå färg och en marginal
+under för att skapa andrum */
 input{
   width: 50%;
   justify-self: center;
@@ -340,14 +371,18 @@ input{
   height: 2.5vw;
   border: #2d95c9 solid 1px;
   border-radius: 5px;
-  text-align: center;
 }
 
+/*en pseudo-class för att ge input en annan bakgrundbild när man skriver i 
+rutan för att indikera för användaren vart man skriver och fokuset är*/
 input:focus{
   background-color: #a6d8f0;
 }
 
-
+/*sätter en bakgrundsfärg på skicka knappen, tar bort standard kanten, rundar hörnen,
+ändrar textfärgen, skugga för "pop-out" effekt, bredd på 20% av sektionens bredd, en 
+minimum längd för att undvika att knappen kollapsar i mindre skärmstorlekar,mellanrum mellan
+text och bakgrund, centrerar texten i mitten och sätter en marginal ovan för att skapa andrum */
 #submit{
   background-color: #2d95c9;
   border: none;
@@ -358,18 +393,21 @@ input:focus{
   min-width: 100px;
   line-height: 0;
   padding: 1em;
-  text-align: center;
   justify-self: center;
   margin-top: 1em;
 }
 
+/*pseudo-class för att indikera en hover och att knappen går att trycka på, med 
+ändrad bakgrundfärg, muspekare och textfärg*/
 #submit:hover{
   background-color: white ;
   color: #2d95c9;
   cursor: pointer;
 }
 
-
+/*utifrån id i HTML filen namges delarna i footern till olika namn för att
+kunna använda mig av grid area för att fördela footern i 4 delar, samt att varje
+del ska centeras */
 #f-section1{
   grid-area: foot1;
   justify-items: center;
@@ -379,16 +417,23 @@ input:focus{
   justify-items: center;
 }
 
+/*skapar andrrum i listan (vertikal navvbar) för att skapa mer plats 
+för varje list item*/
 #f-section2 li{
   margin-bottom: 0.7em;
 }
 
+/*ändra textfärgen, och hur stort mellanrum det är mellan bokstäerna för att
+efterlikna huvudmenyn mer och skapa andrum, och sätta samma font som i huvudrubriken*/
 #f-section2 a{
   color: black;
-  letter-spacing: 0.1em;
   font-family: selawikb, sans;
+  text-decoration: none;
+  letter-spacing: 0.1em;
 }
 
+/*pseudo-class för att indikera att de är länkar man kan trycka på, genom att
+ändra textfärgen */
 #f-section2 a:hover{
   color: #e585b0
 }
@@ -398,17 +443,23 @@ input:focus{
   justify-items: center;
 }
 
+/*flex system för att centera sociala media iconerna i mitten och med ett
+exakt mellanrum som fungerar i alla skärmstorlekar, en marginal ovan för att
+skapa ett större andrum för att skapa illussionen att dem inte riktigt hör samman 
+i de andra delar och sitter mer mot botten av footern, magrinal nedanför för att 
+dem inte ska hamna för långt ner mot kanten */
 #f-section4{
   grid-area: foot4;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 15px;
-  width: 100%;
-  padding-top: 20px;
+  margin-top: 2.5em;
+  margin-bottom: 1em;
 }
 
-
+/*delar in footern i 3 kolimner och 2 rader med hjälp av grids, samt en bakgrundsfärg
+på hela footern och ett mellanrum mellan innehållet och kanterna*/
 footer{
   padding: 1.5em;
   background-color: #D7F2FF;
@@ -420,53 +471,49 @@ footer{
   "foot4 foot4 foot4";
 }
 
-address{
-  font-style: normal;
-  justify-items: center;
-}
-
+/*tar bort standard mellanrummet och centerar listan i kolumnen*/
 footer ul{
   padding-left: 0;
   justify-items: center;
 }
 
+/*tar bort standard punkterna i listan och skapar mellanrum mellan varje
+list item (meny text)  */
 footer li{
   list-style: none;
   padding-bottom: 0.15em;
-
 }
 
+/*tar bort standard understrykningen och ger boksätvernaa mellanrum, som efterliknar
+utseendet som finns i huvudmenyn*/
 footer a{
   text-decoration: none;
   letter-spacing: 0.1em;
 }
 
-footer a:hover{
-  color: white;
-}
-
+/* skapar utseendet på  sociala media knapparna genom att ge, storleken på ikonen, 
+mellanrummet mellan iconen och de runda kanternaaa, skapa bakgrunden till en cirkel, centerar
+iconen i mitten av cirkeln  */
 .social-media .fa{
   padding: 10px;
   font-size: 20px;
   width: 20px;
   border-radius: 50%;
-  text-decoration: none;
-  margin: 5px 2px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+/*speciifik bakgrundsfärg och textfärg för FB iconen */
 .social-media .fa-facebook {
   background: #3B5998;
   color: white;
-  text-decoration: none;
 }
 
+/*speciifik bakgrundsfärg och textfärg för Instagram iconen */
 .social-media .fa-instagram {
   background: #983b7b;
   color: white;
-  text-decoration: none;
 }
 
 .social-media .fa-facebook:hover {
