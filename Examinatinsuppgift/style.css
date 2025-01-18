@@ -441,6 +441,7 @@ efterlikna huvudmenyn mer och skapa andrum, och sätta samma font som i huvudrub
 #f-section3{
   grid-area: foot3;
   justify-items: center;
+  text-align: center;
 }
 
 /*flex system för att centera sociala media iconerna i mitten och med ett
@@ -524,62 +525,61 @@ iconen i mitten av cirkeln  */
   background: #2d95c9;
 }
 
-@media (max-width: 1320px) {
+/*media queries för responsiv design*/
+/* sätter en maxbredd på innehållet till 1300px med ett mellanrum mellan 
+skärrmens kant och innehållet på sidan */
+@media (max-width: 1300px) {
   .wrapper {
-    width: 100%;       
-    padding: 10px;   
+    width: 100%;
+    padding: 1em;          
   }
 }
 
-@media (max-width: 900px) {
+/*media query för första brrytpunkten på 1024px eftersom jag vil tillgodose 
+en bättre upplevelse på lite mindre skärmar och surfplattor */
+@media (max-width: 1024px) {
 
+  /* ökar fonstorleken för att göra det mer läsbart */
   body{
     font-size: 110%;
   }
 
+  /* ökar bredden på formulärets input för att göra de störa, speciellt för 
+  att underlätta för de som använder surfplattor */
   input{
     width: 80%;
     margin-bottom: 0.4em;
-    height: 6vw;
+    height: 5vw;
   }
 
-  #submit{
-    width: 90px;
-  }
-
+  /* ändrar så att sektionen delas upp i 2 kolumner iställer för 4 för att
+  lättare kunna läsa varje mindre sektion och så att de inte blir för ihoptryckta*/
   #mainProductSection{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    width: 100%;       
+    grid-template-columns: 1fr 1fr;     
     grid-template-areas:
     "area1 area2"
     "area3 area4";
   }
 
+  /* ökar textstoleken så att det är enklare att läsa*/
   #newLetterP{
     width: 80%;
   } 
 
-  footer{
-    padding: 0.5em;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    grid-template-areas:
-    "foot1 foot1 foot1"
-    "foot2 auto foot3"
-    "foot4 auto foot4";;
-    gap: 2rem;
-  }
 }
+/*media query för andra brytpunkten, en rekomenderad brytpunkt för mindre skärmar*/
+@media (max-width: 768px) {
 
-@media (max-width: 680px) {
-
+  /* ökar fonstorleken för att öka läsbarheten*/
   body{
     font-size: 130%;
   }
 
+  /* anvädner grid för att skapa två kolumner i huvudmenyn för att få plats
+  med alla 4 alternaativ på skärmen, ger dem ett specifikt glapp som passar bättre
+  för mindre skärmar och centerar texten i mitten samt sätter en egen fontstorlek 
+  för att den inte ska ärva den större storlken som gör den alldeles för stor 
+  i skala till boxarna */
   header nav ul{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -588,17 +588,13 @@ iconen i mitten av cirkeln  */
     text-align: center;
     font-size: 80%;
   }
-
-  .main-section{
-    padding: 0.5em;
-    margin-bottom: 0.2em;
-  }
-
+  
+  /* aanvädner grids för att göra överskådliga produktdelen till en kolumn
+  isätllet för 2*/
   #mainProductSection{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    width: 100%;       
+    grid-template-rows: auto;     
     grid-template-areas:
     "area1"
     "area2"
@@ -607,28 +603,34 @@ iconen i mitten av cirkeln  */
     margin-bottom: 1em;
   }
 
+  /* skapar mellanrum under varje artikel för att skapa mer andrum mellan 
+  varje artikel*/
   article{
-    margin-bottom: 1em;
+    margin-bottom: 2em;
   }
 
+  /* anvädner grids för att ändra produkt innehållet till en kolumn isätlelt för
+  3 st*/
   .productContainer{
     grid-template-columns: 1fr;
   }
 
+  /* ökar textstorleken för mer läsbarhet */
   #newLetterP{
     width: 90%;
   }
 
+  /* använder grids för att göra footern till en kolumn istälelt för 3 st 
+  och centerar innehållet i mitten och ger mer mellanrum mellan raderna för 
+  att skapa andrum och tydligare sektioner */
   footer{
     padding: 0.5em;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
+    grid-template-columns: 1fr;
     grid-template-areas:
-    "foot1 foot1"
-    "foot2 foot2"
-    "foot3 foot3"
-    "foot4 foot4";;
+    "foot1"
+    "foot2"
+    "foot3"
+    "foot4";
     gap: 2rem;
     justify-items: center;
   }
