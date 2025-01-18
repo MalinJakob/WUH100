@@ -9,15 +9,19 @@
   src: url("fonts/selawksb-webfont.woff")format("woff"), url("fonts/selawksb-webfont.woff2") format("woff2");
 }
 
+/*ett övergripande beteende för att kunna ge ett jämnare scroll beteende på sidan */
 html{
   scroll-behavior: smooth;
 }
 
+/* varje scroll target i HTML filen har fått denna klass för att kunna skapa en margin från scroll target
+och där själva målpunkten hamnar för att skapa lite marginal till innehållet */
 .scrollTarget{
   scroll-margin-top: 1em;
 }
 
-/*deklarerar vilken font, och fonstorlek som ska vara i all brödtext på webbplatsen*/
+/*deklarerar vilken font och fonstorlek som ska vara i all brödtext på webbplatsen plus scroll padding för att
+ ge yttligare mellanrum till målpunkten*/
 body{
   font-family: selawik, sans-serif;
   font-size: 90%;
@@ -25,7 +29,7 @@ body{
 }
 
 /* max bredd för huvudinnehållet till 1300 px, border box för att 
- storleken på boxen ska förbli desamma, margin för att förhålla sig till 
+ storleken på boxen ska förbli detsamma, margin för att förhålla sig till 
  center av sin föräldrar container  */
 .wrapper{
   max-width: 1300px;
@@ -46,24 +50,29 @@ h1{
   text-shadow:  0 2px 6px rgba(174, 54, 54, 0.1);
 }
 
+/*färg och stilval på sekondära rubriken på sidan*/
 h2{
   color: #2d95c9;
   text-shadow:  0 1px 3px rgba(174, 54, 54, 0.1);
 }
 
+/*färg på  fjärde klass rubriken på sidan*/
 h4{
   color: #2d95c9;
 }
 
 
-/*sätter textstorleken på alla paragraf samtlinjehöjden */
+/*sätter textstorleken för alla paragraf samt linjehöjden och hur stor plats av sidans bredd texten 
+får tar*/
 p{
   line-height: 170%;
   text-align: center;
   width: 90%;
 }
 
-header{
+/*flex systemet för att skapa placeringenn på huvudmenyn, samt en fast höjd för att
+inte menyn ska skalas upp för stort */
+.mainHeader{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -72,50 +81,53 @@ header{
   margin-bottom: 1em;
 }
 
+/*fastställd höjd på loggan och marginal till vänster */
 #logo{
   height: 80px;
+  margin-left: 0.5em;
 }
 
-header nav ul{
-  list-style: none;
-  display: flex;
-  column-gap: 0.7em;
-  align-items: center;
-  justify-content: space-between;
-}
-
+/* stil för att skapa huvudmenyn i linje med varandra och tillsätta bakgrundsfärg,
+mellanrum mellan text och kanten på bakgrunden och mellaanrum mellan bokstäverna*/
 header nav ul li{
   display: inline-block;
   background-color: hsl(333, 65%, 71%);
-  padding: 1em;
-  line-height: 1em;
-}
-
-header nav ul li a:link{
-  color: aliceblue;
-  text-decoration: none;
+  padding: 0.9em;
   letter-spacing: 0.1em;
 }
 
+/* en pseudo-class för när en länk i huvudmenyn är obesökt, med stil på textfärgen och 
+bortagning av standard understrykningen*/
+header nav ul li a:link{
+  color: aliceblue;
+  text-decoration: none;
+}
+
+/* en pseudo-class för när en länk i huvudmenyn är besökt, med stil på textfärgen */
 header nav ul li a:visited{
   color: aliceblue;
 }
 
+/* en pseudo-class för när en länk i huvudmenyn är aktiv, med alternativ stil på textfärgen och 
+bakgrundsfärgen*/
 header nav ul li a:active{
   color: rgb(234, 104, 104) !important;
   background-color: white;
 }
 
+/* en pseudo-class för när en länk i huvudmenyn har muspekaren på sig, med alternativ stil muspekaren och 
+bakgrundsfärgen för indikera att den går att trycka på*/
 header nav ul li:hover{
   cursor: pointer;
   background-color: #2d95c9;
 }
 
+/* en pseudo-class för när en länk i huvudmenyn har muspekaren på sig, med alternativ stil på textfärgen*/
 header nav ul li a:hover{
   color: antiquewhite;
 }
 
-/*grid för att centrera sökfältet i mitten av sidan */
+/*grid för att centrera sökfältet i mitten av sidan tillsammans med marginaler */
 #searchArea{
   display: grid;
   grid-template-columns: auto;
@@ -124,27 +136,27 @@ header nav ul li a:hover{
   margin: 2rem auto; 
 }
 
-/*sökfält som placeras i mitten av sidan brevid söknappen*/
+/* fixerad höjd och bredd så att den tar upp 70 delar av den aktuella skärmstorleken, detta
+gör den skalbar när skärmstorleken ökar eller minskar. Stil för hur själva sökrutan ska se
+ut med kant som har rundade hörn och en skugga så att den ser ut att "sticka" fram mer. */
 #searchBox{
   width: 70vw;
   height: 20px;
   border: hsl(333, 65%, 71%) solid 1px;
   border-radius: 5px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 0.5em;
   text-align: start;
 }
 
+/* stil på bakgrundsbilden som är placerat högt upp på sidan, med en fixerad 
+höjd för att bilden ska skala inom den givna storleken, sedan cover för att fylla 
+behållaren och center för att centera bilden i mitten. */
 .background-image{
-  height: 300px;
+  height: 400px;
   background-image: url("images/background.jpg");
   background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin-top: 30px;
-  margin-bottom: 50px;
+  background-position: center;
   color:#2E2C45 ;
 }
 

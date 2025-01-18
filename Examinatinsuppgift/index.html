@@ -1,28 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- meta tags för att tillhandhålla metaa data om webbplatsen och länkar till style sheeten-->
+  <!-- meta tags för att tillhandhålla information om datan sngående webbplatsen och länkar till stilmallar-->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Examinationsuppgift" />
     <meta name="author" content="Malin Jakob" />
-    <title>Malin Jakob</title>
+    <title>Slopes Production</title>
     <!-- normalizer CSS reset-->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
     />
+    <!-- Egna stilmallen-->
     <link rel="stylesheet" href="style.css" />
+    <!-- en stilmallslänk för att få tillgång till sociala media iconer-->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
   </head>
-  <!-- allt innehåll på sidan finns under diven, Wrapper för att lättare kunna 
- stilsätta huvudinnehållet. Efter det kommer en huvudmenyn tillsammans med företagets logga -->
   <body>
+    <!-- allt innehåll på sidan finns under en div låda (Wrapper)  för att lättare kunna 
+   stilsätta huvudinnehållet. -->
     <div class="wrapper">
-      <header>
+     <!--  header med företagets logga, med en img tag och formatet PNG eftersom det är en logga och en huvudmenyn -->
+      <header class="mainHeader">
         <img
           id="logo"
           src="images/LogotypSlopesProduction.png"
@@ -32,7 +35,7 @@
         <!--navigationsmeny-->
         <nav>
           <ul>
-            <li><a href="#">HOME</a></li>
+            <li><a href="index.html">HOME</a></li>
             <li><a href="analys.html">ANALYS</a></li>
             <li><a href="#scrollTargetProduct">PRODUCTS</a></li>
             <li><a href="#">CONTACT</a></li>
@@ -40,17 +43,20 @@
         </nav>
       </header>
       <!--sökfält i form av en input så att användaren 
-        kan söka efter varor-->
+        ska kunna söka efter varor-->
       <div id="searchArea">
         <input type="text" placeholder="Search.." id="searchBox" />
       </div>
       <!-- plats för bakgrundbild som kommer tillkomma i stilmallen-->
       <div class="background-image"></div>
+      <!-- huvudinnehållet som är indelat i 4 sektioner med relaterat inehåll-->
       <main>
+        <!-- första sektionen innehållet huvudrubriken och huvudinformationen -->
         <section id="welcomeP">
           <header>
             <h1>SLOPES</h1>
           </header>
+          <!-- informations text om företaget, en introduktion-->
           <p>
             At Slopes Productions, we’re passionate about fueling your
             adventures on the slopes. Whether you’re carving down pristine
@@ -63,6 +69,10 @@
             conquer the slopes with us—because the mountains are calling!
           </p>
         </section>
+        <!-- andra sektionen är enn översikt över vilka produkter som finns på sidan
+         uppdelat i mindre sektioner där varje sektion är utrustad med en egen bild, rubrik, text 
+         och knapp för att samla innehållet på en gemensam yta för att sedan kunna placera 
+         varje mindre sektion brevid varandra-->
         <section id="mainProductSection">
           <section class="main-section" id="section1">
             <img
@@ -70,15 +80,20 @@
               alt="Close-up of a blue ski gondola carrying multiple colorful skis on a rack, with snow-capped mountains and a clear blue sky in the background."
             />
             <h2>Goggles</h2>
+            <!-- kort information om produkten-->
             <p>
               Crystal-clear vision with premium ski goggles. Anti-fog, UV
               protection, and stylish designs for every adventure. Exist in all
               shapes, colors and design!
             </p>
-            <button class="productButton">
+            <div class="productButton">
+              <!-- varje knapp har en anchor tagg för att kunna ge knappen en väg att gå
+               om den blir tryckt, man scrollas automatiskt ner till motsvarande id längre 
+               ner på sidan-->
               <a href="#scrollTarget1">See more</a>
-            </button>
+            </div>
           </section>
+          <!-- allt ovan repeteras för alla 4 mindre sektioner-->
           <section class="main-section" id="section2">
             <img
               src="images/skidor.jpg"
@@ -90,9 +105,9 @@
               slopes or exploring backcountry adventures. Precision and
               durability guaranteed.
             </p>
-            <button class="productButton">
+            <div class="productButton">
               <a href="#scrollTarget2">See more</a>
-            </button>
+            </div>
           </section>
           <section class="main-section" id="section3">
             <img
@@ -105,9 +120,9 @@
               for hitting the powder. Transform your mountain
               experience with our high-performance split boards.
             </p>
-            <button class="productButton">
+            <div class="productButton">
               <a href="#scrollTarget3">See more</a>
-            </button>
+            </div>
           </section>
           <section class="main-section" id="section4">
             <img
@@ -120,17 +135,26 @@
               warm and safe in the slope. From helmets to boots, everything you
               need for the slopes!
             </p>
-            <button class="productButton">
+            <div class="productButton">
               <a href="#scrollTarget4">See more</a>
-            </button>
+            </div>
           </section>
         </section>
+        <!-- Tredje stora sektionen är relaterade innehåll kopplat till produkterna som säljs på sidan.
+          Allt innehåll i sektionen är uppdelat i mindre div lådor  -->
         <section>
+          <!-- har en egen header och rubrik för attt visa att det är en ny samling av relaterade innehåll-->
           <header id="productMainHeader">
+            <!-- yttligare en scroll target har angivits för att från huvudmenyn kunna enkelt ta sig hit på ett knapptryck-->
             <h1 class="scrollTarget" id="scrollTargetProduct">PRODUCTS</h1>
           </header>
-          <article class="productContainer">
-            <article class="product" class="scrollTarget" id="scrollTarget1">
+          <!-- Varje div låda är indelat i 3st artiklar-->
+          <div class="productContainer">
+            <!-- Varje artikel är indelat bild, två rubriker och en knapp. Informationen hade kunnat vara fristående
+             och tillsammans bildar all information inom artikeln informationen om den produkten. Allt är samlat för 
+             att kunna ge en helhets bild av produkten. Varje första artikel i sektionen har ett eget scroll target id som 
+             är kopplat till knappen som finns i de olika sektionerna i produkt översikten -->
+            <article class="product scrollTarget" id="scrollTarget1">
               <img
                 src="images/goggles1.jpg"
                 alt="Person wearing a black hoodie and orange ski goggles in the snow."
@@ -157,9 +181,10 @@
               <h4>130€</h4>
               <button class="buyButton">Buy</button>
             </article>
-          </article>
-          <article class="productContainer">
-            <article class="product" class="scrollTarget" id="scrollTarget2">
+          </div>
+          <!-- Varje div låda fungerar på samma sätt som nämn ovan för att skapa en enhetlig bild -->
+          <div class="productContainer">
+            <article class="product scrollTarget"  id="scrollTarget2">
               <img
                 src="images/ski1.jpg"
                 alt="A dramatic aerial ski jump against a bright blue sky, with a skier performing a trick on Tyrolia skis. Snow-covered mountain peaks and a ski lodge are visible in the background."
@@ -186,9 +211,10 @@
               <h4>130€</h4>
               <button class="buyButton">Buy</button>
             </article>
-          </article>
-          <article class="productContainer">
-            <article class="product" class="scrollTarget" id="scrollTarget3">
+          </div>
+          <!-- Varje div låda fungerar på samma sätt som nämn ovan för att skapa en enhetlig bild -->
+          <div class="productContainer">
+            <article class="product scrollTarget" id="scrollTarget3">
               <img
                 src="images/snowboard1.jpg"
                 alt="A snowboarder in a bright yellow jacket and black beanie stands at the top of a snow-covered slope, holding a snowboard with colorful red and purple graphics. In the background, a vast winter landscape of snow-covered evergreen forest stretches into the distance at dusk."
@@ -200,7 +226,6 @@
             <article class="product">
               <img
                 src="images/snowboard2.jpg"
-                alt="snowboard-jump.jpg"
                 alt="A dynamic action shot of a snowboarder mid-jump against a turquoise winter sky, with snow particles spraying through the air. The snowboard displays 'Backshot' branding, and pine trees are visible in the background. The photo is shot from a low angle perspective."
               />
               <h3>Swaymount Snowboard</h3>
@@ -216,9 +241,10 @@
               <h4>130€</h4>
               <button class="buyButton">Buy</button>
             </article>
-          </article>
-          <article class="productContainer">
-            <article class="product" class="scrollTarget" id="scrollTarget4">
+          </div>
+          <!-- Varje div låda fungerar på samma sätt som nämn ovan för att skapa en enhetlig bild -->
+          <div class="productContainer">
+            <article class="product scrollTarget" id="scrollTarget4">
               <img
                 src="images/eq1.jpg"
                 alt="Person wearing a black hoodie and orange ski goggles in the snow."
@@ -242,12 +268,16 @@
               <h4>60€</h4>
               <button class="buyButton">Buy</button>
             </article>
-          </article>
+          </div>
         </section>
+        <!-- Fjärde sektionen är informationen som behövs för att skapa information och följa möjlighet 
+         till företagets nyhetsbrev -->
         <section id="newsletter">
+          <!-- egen header med nyhetsbrevets rubrik -->
           <header id="labelNewsletter">
             <h2 id="subscribe">Subscribe to our newsletter!</h2>
           </header>
+          <!-- informerande text om nyhetsbrevet-->
           <p id="newLetterP"> 
             Stay ahead on the slopes! Subscribe to Slopes Productions’
             newsletter for exclusive deals on top-quality gear, insider tips,
@@ -255,40 +285,45 @@
             sales, and events. Whether you're a skier or snowboarder, our
             updates keep you ready for every adventure. Sign up today!
           </p>
-          <!-- använing av form för att skapa input som användaren kan använda för att 
+          <!-- en form för att skapa input som användaren kan använda för att 
            registera sig till ett nyhetsbrev-->
           <form id="signUp">
             <fieldset>
               <label for="name">Name</label>
               <input type="text" required name="name" id="name" />
-              <label for="firstName">Email</label>
+              <label for="email">Email</label>
               <input type="email" required name="email" id="email" />
               <input type="submit" name="submit" id="submit" value="Send"/>
             </fieldset>
           </form>
         </section>
       </main>
+      <!-- Footern på sidan som är indelad i 3 sektioner och en div låda, varje sektion har ett id som 
+       sedan är kopplar till grid area i stilmallen-->
       <footer>
+        <!-- första sektionen är all information kopplat till kontakt information-->
         <section id="f-section1">
-          <address>
+          <!-- allt innehåll kring kontakt infon är smlatt här, i p & h4 taggs 
+           för att skapa enklare struktur/stil på informationen-->
             <h4>Contact Us</h4>
             <p>Main Store: 1234 Mountain View Drive, Aspen, CO 81611</p>
             <p>Customer Service: 1-800-SLOPES-PRO</p>
             <p>Email: info@slopesproduction.com</p>
             <p>Hours: Mon-Sat 8AM-8PM MST, Sun 9AM-6PM MST</p>
-          </address>
         </section>
+        <!--andra sektionen är en vertikal naavigationsbar -->
         <section id="f-section2">
           <h4>Navigation</h4>
           <nav class="footer-nav">
             <ul>
-              <li><a href="#">HOME</a></li>
+              <li><a href="index.html">HOME</a></li>
               <li><a href="analys.html">ANALYS</a></li>
               <li><a href="#">PRODUCTS</a></li>
               <li><a href="#">CONTACT</a></li>
             </ul>
           </nav>
         </section>
+        <!-- tredje sektionen är kort information kring företaget-->
         <section id="f-section3">
           <h4>About Slopes Production</h4>
           <p>
@@ -298,18 +333,20 @@
             snowboarding and skiing gear.
           </p>
         </section>
-        <section id="f-section4" class="social-media social-media-icons">
+        <!-- Div lådan är sociala media iconer och vart de länkar till. en div låda
+         eftersom det är innehåll utan rubrik -->
+        <div id="f-section4" class="social-media social-media-icons">
           <a
-            href="https://www.facebook.com/malin.jakob"
+            href="https://www.facebook.com"
             target="_blank"
             class="fa fa-facebook"
           ></a>
           <a
-            href="https://www.instagram.com/malinjakob/"
+            href="https://www.instagram.com"
             target="_blank"
             class="fa fa-instagram"
           ></a>
-        </section>
+        </div>
       </footer>
     </div>
   </body>
