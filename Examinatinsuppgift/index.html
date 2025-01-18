@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- meta tags för att tillhandhålla information om datan sngående webbplatsen och länkar till stilmallar-->
+  <!-- meta tags för att tillhandahålla information om datan angående webbplatsen och länkar till stilmallar-->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Examinationsuppgift" />
     <meta name="author" content="Malin Jakob" />
     <title>Slopes Production</title>
-    <!-- normalizer CSS reset-->
+    <!-- normalizer för CSS reset-->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
@@ -24,7 +24,7 @@
     <!-- allt innehåll på sidan finns under en div låda (Wrapper)  för att lättare kunna 
    stilsätta huvudinnehållet. -->
     <div class="wrapper">
-     <!--  header med företagets logga, med en img tag och formatet PNG eftersom det är en logga och en huvudmenyn -->
+     <!--  header med företagets logga, med en bild och formatet PNG eftersom det är en logga och en huvudmenyn -->
       <header class="mainHeader">
         <img
           id="logo"
@@ -32,7 +32,9 @@
           alt="Logo for the company Slopes Productions, it illustrates a pink mo
       mountain over the text and a snowboard under"
         />
-        <!--navigationsmeny-->
+        <!--navigationsmeny, skapad med en ostruturerad lista med list items som varje
+        item har en anchor som är antigen har en relativ länk till en sida på webbplatsen 
+        eller en id target, och en utan någon destination -->
         <nav>
           <ul>
             <li><a href="index.html">HOME</a></li>
@@ -49,14 +51,14 @@
       </div>
       <!-- plats för bakgrundbild som kommer tillkomma i stilmallen-->
       <div class="background-image"></div>
-      <!-- huvudinnehållet som är indelat i 4 sektioner med relaterat inehåll-->
+      <!-- huvudinnehållet som är indelat i 4 sektioner med relaterat innehåll-->
       <main>
         <!-- första sektionen innehållet huvudrubriken och huvudinformationen -->
         <section id="welcomeP">
           <header>
             <h1>SLOPES</h1>
           </header>
-          <!-- informations text om företaget, en introduktion-->
+          <!-- information text om företaget, en introduktion-->
           <p>
             At Slopes Productions, we’re passionate about fueling your
             adventures on the slopes. Whether you’re carving down pristine
@@ -69,7 +71,7 @@
             conquer the slopes with us—because the mountains are calling!
           </p>
         </section>
-        <!-- andra sektionen är enn översikt över vilka produkter som finns på sidan
+        <!-- andra sektionen är en översikt över vilka produkter som finns på sidan
          uppdelat i mindre sektioner där varje sektion är utrustad med en egen bild, rubrik, text 
          och knapp för att samla innehållet på en gemensam yta för att sedan kunna placera 
          varje mindre sektion brevid varandra-->
@@ -93,7 +95,7 @@
               <a href="#scrollTarget1">See more</a>
             </div>
           </section>
-          <!-- allt ovan repeteras för alla 4 mindre sektioner-->
+          <!-- allt ovan repeteras för alla mindre sektioner-->
           <section class="main-section" id="section2">
             <img
               src="images/skidor.jpg"
@@ -109,6 +111,7 @@
               <a href="#scrollTarget2">See more</a>
             </div>
           </section>
+          <!-- allt ovan repeteras för alla mindre sektioner-->
           <section class="main-section" id="section3">
             <img
               src="images/snowboard.jpg"
@@ -124,6 +127,7 @@
               <a href="#scrollTarget3">See more</a>
             </div>
           </section>
+          <!-- allt ovan repeteras för alla mindre sektioner-->
           <section class="main-section" id="section4">
             <img
               src="images/boots.jpg"
@@ -155,12 +159,15 @@
              att kunna ge en helhets bild av produkten. Varje första artikel i sektionen har ett eget scroll target id som 
              är kopplat till knappen som finns i de olika sektionerna i produkt översikten -->
             <article class="product scrollTarget" id="scrollTarget1">
+            <!-- Bild tagg med en utrfölig alt text för att öka tillgängligheten-->
               <img
                 src="images/goggles1.jpg"
                 alt="Person wearing a black hoodie and orange ski goggles in the snow."
               />
+              <!-- olika rubriker för att skapa nivåer på produkt informationen-->
               <h3>Orange goggles</h3>
               <h4>120€</h4>
+              <!-- en knapp för att kunna köpa produkten, har ingen destination för tillfället-->
               <button class="buyButton">Buy</button>
             </article>
             <article class="product">
@@ -270,8 +277,8 @@
             </article>
           </div>
         </section>
-        <!-- Fjärde sektionen är informationen som behövs för att skapa information och följa möjlighet 
-         till företagets nyhetsbrev -->
+        <!-- Fjärde sektionen är informationen som behövs för att skapa information och möjlighet 
+         att prenumerera till företagets nyhetsbrev -->
         <section id="newsletter">
           <!-- egen header med nyhetsbrevets rubrik -->
           <header id="labelNewsletter">
@@ -303,7 +310,7 @@
       <footer>
         <!-- första sektionen är all information kopplat till kontakt information-->
         <section id="f-section1">
-          <!-- allt innehåll kring kontakt infon är smlatt här, i p & h4 taggs 
+          <!-- allt innehåll kring kontakt infon är samlat här, i en paragraf & rubrik
            för att skapa enklare struktur/stil på informationen-->
             <h4>Contact Us</h4>
             <p>Main Store: 1234 Mountain View Drive, Aspen, CO 81611</p>
@@ -311,19 +318,20 @@
             <p>Email: info@slopesproduction.com</p>
             <p>Hours: Mon-Sat 8AM-8PM MST, Sun 9AM-6PM MST</p>
         </section>
-        <!--andra sektionen är en vertikal naavigationsbar -->
+        <!--andra sektionen är en vertikal naavigationsbar, i form av ostrukurerad lista me dlist items, där varje
+        list item har en anchor tag till en relativlänk, id target eller inget. -->
         <section id="f-section2">
           <h4>Navigation</h4>
           <nav class="footer-nav">
             <ul>
               <li><a href="index.html">HOME</a></li>
               <li><a href="analys.html">ANALYS</a></li>
-              <li><a href="#">PRODUCTS</a></li>
+              <li><a href="#scrollTargetProduct">PRODUCTS</a></li>
               <li><a href="#">CONTACT</a></li>
             </ul>
           </nav>
         </section>
-        <!-- tredje sektionen är kort information kring företaget-->
+        <!-- tredje sektionen är kort information kring företaget, med egen rubrik och paragraf-->
         <section id="f-section3">
           <h4>About Slopes Production</h4>
           <p>
@@ -333,7 +341,7 @@
             snowboarding and skiing gear.
           </p>
         </section>
-        <!-- Div lådan är sociala media iconer och vart de länkar till. en div låda
+        <!-- Div lådan är sociala media iconer och vart de länkar till. En div låda
          eftersom det är innehåll utan rubrik -->
         <div id="f-section4" class="social-media social-media-icons">
           <a
