@@ -1,4 +1,4 @@
-/*deklarerar fonts till webbplatsen taget från Font Squirrel*/
+/*deklarerar två fonts till webbplatsen taget från Font Squirrel*/
 @font-face{
   font-family: selawik;
   src: url("fonts/selawk-webfont.woff") format("woff"), url("fonts/selawk-webfont.woff2") format("woff2");
@@ -14,13 +14,13 @@ html{
   scroll-behavior: smooth;
 }
 
-/* varje scroll target i HTML filen har fått denna klass för att kunna skapa en margin från scroll target
-och där själva målpunkten hamnar för att skapa lite marginal till innehållet */
+/* varje scroll target element i HTML filen har fått denna klass för att kunna skapa en margin från elementet 
+och där själva målpunkten hamnar för att skapa mellanrum till innehållet */
 .scrollTarget{
   scroll-margin-top: 1em;
 }
 
-/*deklarerar vilken font och fonstorlek som ska vara i all brödtext på webbplatsen plus scroll padding för att
+/*deklarerar vilken font och textstorlek som ska vara i all brödtext på webbplatsen plus scroll padding för att
  ge yttligare mellanrum till målpunkten*/
 body{
   font-family: selawik, sans-serif;
@@ -28,11 +28,11 @@ body{
   scroll-padding-top: 100px;
 }
 
-/* max bredd för huvudinnehållet till 1300 px, border box för att 
- storleken på boxen ska förbli detsamma, margin för att förhålla sig till 
- center av sin föräldrar container  */
+/* max bredd för huvudinnehållet till 1366 px, border box för att 
+ storleken på boxen vara den riktiga storleken, margin för att förhålla sig till 
+ center av sitt föräldrar element  */
 .wrapper{
-  max-width: 1300px;
+  max-width: 1366px;
   margin: 0 auto;
   box-sizing: border-box; 
 }
@@ -56,7 +56,7 @@ h2{
   text-shadow:  0 1px 3px rgba(174, 54, 54, 0.1);
 }
 
-/*färg på  fjärde klass rubriken på sidan*/
+/*färg på fjärde klass rubriken på sidan*/
 h4{
   color: #2d95c9;
 }
@@ -87,7 +87,7 @@ inte menyn ska skalas upp för stort */
 }
 
 /* stil för att skapa huvudmenyn i linje med varandra och tillsätta bakgrundsfärg,
-mellanrum mellan text och kanten på bakgrunden och mellaanrum mellan bokstäverna*/
+mellanrum mellan text och kanten på bakgrunden och mellanrum mellan bokstäverna*/
 header nav ul li{
   display: inline-block;
   background-color: hsl(333, 65%, 71%);
@@ -160,9 +160,10 @@ skapa ett indrag och ökar textstorleken så att den blir mer läsbar*/
   margin-left: 0.7em ;
 }
 
-/* sätter listans start till vänster*/
+/* sätter listans start till vänster och tar bort mellanrummet till väster*/
 .analysUl{
   text-align: left;
+  padding-inline-start: 0;
 }
 
 /* sätter marginal för att skapa ett mellanrum mellan varje referens*/
@@ -204,7 +205,7 @@ behållaren och center för att centera bilden i mitten. */
 }
 
 
-/*centerar allt innehåll i main och en mairgnal åt alla håll för att skapa
+/*centerar allt innehåll i huvudinnehållet och en mairgnal åt alla håll för att skapa
 lite tomrum*/
 main{
   justify-items: center;
@@ -213,7 +214,7 @@ main{
 
 /*centerar välkomst/huvudinformationen, sätter bredden till 70% av den 
 aktuella skärmlängden, marginal ovan och ubnnder för att skapa andrum och 
-font storlek till 120%   */
+textstorlek till 120%   */
 #welcomeP{
   justify-items: center;
   margin-bottom: 3em;
@@ -223,7 +224,7 @@ font storlek till 120%   */
 }
 
 /* använder id från HTML filen för att definera namnet på vad den delen 
-ska kallas i grid area*/
+ska kallas i grid areas*/
 #section1{
   grid-area: area1;
 }
@@ -303,7 +304,7 @@ att skapa mer andrum*/
   margin-bottom: 2em;
 }
 
-/* anvädner grid frö att skapa 3 st kolumner och sätter en marginal under för att
+/* använderr grids för att skapa 3 st kolumner och sätter en marginal under för att
 skapa andrum till nästa sektion */
 .productContainer{
   display: grid;
@@ -312,10 +313,10 @@ skapa andrum till nästa sektion */
   margin-bottom: 3em;
 }
 
-/* sätter bilderna till 60% för att de inte ska ta upp för stor plats i div lådan,
+/* sätter bilderna till 60% för att de inte ska ta upp för stor plats i div elementet,
 sedan skapa runda kanter på bilderna för att få ett mjukare intryck, en skugga för 
 "pop-out" effekt, centerar bilden i mitten och sedan ger en marginal ovan för 
-att bilden inte ska sitta i kant med höjden av div lådan utan skapar andrum  */
+att bilden inte ska sitta i kant med höjden av div elementet utan skapar andrum  */
 .productContainer img {
   width: 60%;
   border-radius: 10px;
@@ -329,7 +330,7 @@ article{
   text-align: center;
 }
 
-/*sätter en bakgrundfärg på produkt artikalrna, en rundad kant och marginaler 
+/*sätter en bakgrundfärg på produkt artiklarna, en rundad kant och marginaler 
 åt båda sidorna*/
 .product{
   background-color:  #dff2fc9f;
@@ -357,9 +358,9 @@ muspekaren ändras för att indikera att det är en knapp som går att trycka p�
   cursor: pointer;
 }
 
-/*sätter en bakgrundbild för hela sektionen för att rama in innehållet, gör bakgrunden
+/*sätter en bakgrundfärg för hela sektionen för att rama in innehållet, gör bakgrunden
 lite mindre opacitet, sätter färg på texten, gör att innehållet har ett sttörre andrum
-till kanntarna och sätter egen font stolek */
+till kanntarna och sätter egen textstorlek */
 #newsletter{
   background-color: #e585b0;
   opacity: 80%;
@@ -369,7 +370,8 @@ till kanntarna och sätter egen font stolek */
   font-size: 115%;
 }
 
-/*ändrar denna rubrik till en annan färgen och centerar texten i mitten av sektionen*/
+/*ändrar denna rubrik till en annan färg eftersom bakgrundfärgen är annurlunda på denna del 
+och centerar texten i mitten av sektionen*/
 #subscribe{
   color: white;
   text-align: center;
@@ -381,7 +383,7 @@ rubriken och texten i denna sektion */
   margin-bottom: 3em;
 }
 
-/* sätter att texten endast ska upp 60% av sektionen för att samla innehållet 
+/* sätter att texten endast ska ta upp 60% av sektionen för att samla innehållet 
 och sedan centera det till mitten*/
 #newLetterP{
   width: 60%;
@@ -404,8 +406,8 @@ label{
 }
 
 /*sätter att inputen ska vara 50% av sektionens bredd för att samla innehållet
-mer i mitten, cetnerar dem i mitten, sätter en höjd som gör den skalbar efter
-skärmensbredd, en rundad kant för en mjuka känsla med en blå färg och en marginal
+mer i mitten, centrerar dem i mitten, sätter en höjd som gör den skalbar efter
+skärmens bredd, en rundad kant för en mjuka känsla med en blå färg och en marginal
 under för att skapa andrum */
 input{
   width: 50%;
@@ -416,7 +418,7 @@ input{
   border-radius: 5px;
 }
 
-/*en pseudo-class för att ge input en annan bakgrundbild när man skriver i 
+/*en pseudo-class för att ge input en annan bakgrundsfärg när man skriver i 
 rutan för att indikera för användaren vart man skriver och fokuset är*/
 input:focus{
   background-color: #a6d8f0;
@@ -424,7 +426,7 @@ input:focus{
 
 /*sätter en bakgrundsfärg på skicka knappen, tar bort standard kanten, rundar hörnen,
 ändrar textfärgen, skugga för "pop-out" effekt, bredd på 20% av sektionens bredd, en 
-minimum längd för att undvika att knappen kollapsar i mindre skärmstorlekar,mellanrum mellan
+minimum längd för att undvika att knappen kollapsar i mindre skärmstorlekar, mellanrum mellan
 text och bakgrund, centrerar texten i mitten och sätter en marginal ovan för att skapa andrum */
 #submit{
   background-color: #2d95c9;
@@ -440,7 +442,7 @@ text och bakgrund, centrerar texten i mitten och sätter en marginal ovan för a
   margin-top: 1em;
 }
 
-/*pseudo-class för att indikera en hover och att knappen går att trycka på, med 
+/*pseudo-class för att indikera en hover och att knappen går att trycka på, genom att 
 ändrad bakgrundfärg, muspekare och textfärg*/
 #submit:hover{
   background-color: white ;
@@ -449,25 +451,27 @@ text och bakgrund, centrerar texten i mitten och sätter en marginal ovan för a
 }
 
 /*utifrån id i HTML filen namges delarna i footern till olika namn för att
-kunna använda mig av grid area för att fördela footern i 4 delar, samt att varje
-del ska centeras */
+kunna använda grid areas för att fördela footern i 4 delar */
+/*namger sektionen för att kunna arbeta med grid areas. Centerar innehållet*/
 #f-section1{
   grid-area: foot1;
   justify-items: center;
 }
+
+/*namger sektionen för att kunna arbeta med grid areas. Centerar innehållet*/
 #f-section2{
   grid-area: foot2;
   justify-items: center;
 }
 
-/*skapar andrrum i listan (vertikal navvbar) för att skapa mer plats 
-för varje list item*/
+/*skapar andrum i listan (vertikal navbar) för att skapa mer plats 
+för varje list element*/
 #f-section2 li{
   margin-bottom: 0.7em;
 }
 
-/*ändra textfärgen, och hur stort mellanrum det är mellan bokstäerna för att
-efterlikna huvudmenyn mer och skapa andrum, och sätta samma font som i huvudrubriken*/
+/* Ändrar textfärgen, hur stort mellanrum det är mellan bokstäerna 
+för att efterlikna huvudmenyn och skapa andrum, och sätter samma font som i huvudrubriken */
 #f-section2 a{
   color: black;
   font-family: selawikb, sans;
@@ -475,19 +479,19 @@ efterlikna huvudmenyn mer och skapa andrum, och sätta samma font som i huvudrub
   letter-spacing: 0.1em;
 }
 
-/*pseudo-class för att indikera att de är länkar man kan trycka på, genom att
-ändra textfärgen */
+/* pseudo-class för att indikera att de är länkar man kan trycka på, genom att ändra textfärgen */
 #f-section2 a:hover{
   color: #e585b0
 }
 
+/*  namger sektionen för att kunna arbeta med grid areas och centerar innehållet*/
 #f-section3{
   grid-area: foot3;
   justify-items: center;
   text-align: center;
 }
 
-/*flexbox system för att centera sociala media iconerna i mitten och med ett
+/* namger sektionen för att kunna arbeta med grid areas. Flexbox system för att centera sociala media iconerna i mitten och med ett
 exakt mellanrum som fungerar i alla skärmstorlekar, en marginal ovan för att
 skapa ett större andrum för att skapa illussionen att dem inte riktigt hör samman 
 i de andra delar och sitter mer mot botten av footern, magrinal nedanför för att 
@@ -502,7 +506,7 @@ dem inte ska hamna för långt ner mot kanten */
   margin-bottom: 1em;
 }
 
-/*delar in footern i 3 kolimner och 2 rader med hjälp av grids, samt en bakgrundsfärg
+/*delar in footern i 3 kolumner och 2 rader med hjälp av grids, samt en bakgrundsfärg
 på hela footern och ett mellanrum mellan innehållet och kanterna*/
 footer{
   padding: 1.5em;
@@ -522,7 +526,7 @@ footer ul{
 }
 
 /*tar bort standard punkterna i listan och skapar mellanrum mellan varje
-list item (meny text)  */
+list element (meny text)  */
 footer li{
   list-style: none;
   padding-bottom: 0.15em;
@@ -535,9 +539,9 @@ footer a{
   letter-spacing: 0.1em;
 }
 
-/* skapar utseendet på  sociala media knapparna genom att ge, storleken på ikonen, 
-mellanrummet mellan iconen och de runda kanternaaa, skapa bakgrunden till en cirkel, centerar
-iconen i mitten av cirkeln  */
+/* skapar utseendet på sociala media knapparna genom att ge, storleken på ikonen, 
+mellanrummet mellan iconen och de runda kanterna, skapa bakgrunden till en cirkel och centerar
+ikonen i mitten av cirkeln  */
 .social-media .fa{
   padding: 10px;
   font-size: 20px;
@@ -548,29 +552,33 @@ iconen i mitten av cirkeln  */
   align-items: center;
 }
 
-/*speciifik bakgrundsfärg och textfärg för FB iconen */
+/*speciifik bakgrundsfärg och textfärg för FB ikonen */
 .social-media .fa-facebook {
   background: #3B5998;
   color: white;
 }
 
-/*speciifik bakgrundsfärg och textfärg för Instagram iconen */
+/*speciifik bakgrundsfärg och textfärg för Instagram ikonen */
 .social-media .fa-instagram {
   background: #983b7b;
   color: white;
 }
 
+/* pseudo-class med annan bakgrundsfärg för indikera att 
+det är en länk och går att trycka på  */
 .social-media .fa-facebook:hover {
   background: #2d95c9;
 }
 
+/* pseudo-class med annan bakgrundsfärg för indikera att 
+det är en länk och går att trycka på  */
 .social-media .fa-instagram:hover{
   background: #2d95c9;
 }
 
 /*media queries för responsiv design*/
 /* sätter en maxbredd på innehållet till 1366px med ett mellanrum mellan 
-skärrmens kant och innehållet på sidan */
+skärmens kant och innehållet på sidan */
 @media (max-width: 1366px) {
   .wrapper {
     width: 100%;
@@ -587,7 +595,7 @@ en bättre upplevelse på lite mindre skärmar och surfplattor */
     font-size: 110%;
   }
 
-  /* ökar bredden på formulärets input för att göra de störa, speciellt för 
+  /* ökar bredden på formulärets input för att göra de större, speciellt för 
   att underlätta för de som använder surfplattor */
   input{
     width: 80%;
@@ -595,7 +603,7 @@ en bättre upplevelse på lite mindre skärmar och surfplattor */
     height: 5vw;
   }
 
-  /* ändrar så att sektionen delas upp i 2 kolumner iställer för 4 för att
+  /* ändrar så att sektionen delas upp i 2 kolumner iställer för 4 st för att
   lättare kunna läsa varje mindre sektion och så att de inte blir för ihoptryckta*/
   #mainProductSection{
     grid-template-columns: 1fr 1fr;     
@@ -609,19 +617,24 @@ en bättre upplevelse på lite mindre skärmar och surfplattor */
     width: 80%;
   } 
 
+  /* minskar bredden på analys sidan relativt till skärmensstorlek*/
+  #analysMain{
+    width: 80%;
+  }
+
 }
 /*media query för andra brytpunkten, en rekomenderad brytpunkt för mindre skärmar*/
 @media (max-width: 768px) {
 
-  /* ökar fonstorleken för att öka läsbarheten*/
+  /* ökar textstorleken för att öka läsbarheten*/
   body{
     font-size: 130%;
   }
 
-  /* anvädner grid för att skapa två kolumner i huvudmenyn för att få plats
+  /* använder grids för att skapa två kolumner i huvudmenyn för att få plats
   med alla 4 alternaativ på skärmen, ger dem ett specifikt glapp som passar bättre
-  för mindre skärmar och centerar texten i mitten samt sätter en egen fontstorlek 
-  för att den inte ska ärva den större storlken som gör den alldeles för stor 
+  för mindre skärmar och centerar texten i mitten samt sätter en egen textstorlek 
+  för att den inte ska ärva den större storleken som gör den alldeles för stor 
   i skala till boxarna */
   header nav ul{
     display: grid;
@@ -632,8 +645,8 @@ en bättre upplevelse på lite mindre skärmar och surfplattor */
     font-size: 80%;
   }
   
-  /* aanvädner grids för att göra överskådliga produktdelen till en kolumn
-  isätllet för 2*/
+  /* anvädner grids för att göra överskådliga produktdelen till en kolumn
+  istället för 2st */
   #mainProductSection{
     display: grid;
     grid-template-columns: 1fr;
@@ -652,7 +665,7 @@ en bättre upplevelse på lite mindre skärmar och surfplattor */
     margin-bottom: 2em;
   }
 
-  /* anvädner grids för att ändra produkt innehållet till en kolumn isätlelt för
+  /* använder grids för att ändra produkt innehållet till en kolumn istället för
   3 st*/
   .productContainer{
     grid-template-columns: 1fr;
@@ -663,7 +676,7 @@ en bättre upplevelse på lite mindre skärmar och surfplattor */
     width: 90%;
   }
 
-  /* använder grids för att göra footern till en kolumn istälelt för 3 st 
+  /* använder grids för att göra footern till en kolumn istället för 3 st 
   och centerar innehållet i mitten och ger mer mellanrum mellan raderna för 
   att skapa andrum och tydligare sektioner */
   footer{
@@ -677,4 +690,30 @@ en bättre upplevelse på lite mindre skärmar och surfplattor */
     gap: 2rem;
     justify-items: center;
   }
+
+  /* sätter headern till vänster och minskar storleken relativt till skärmstorleken*/
+  #analysHeader{
+    text-align: start;
+    display: grid;
+    justify-self: left;
+    width: 60%;
+  }
+  
+  /* tar bort marginalen till vänster */
+  #analysArticle p{
+    margin-left: 0;
+  }
+  
+  /* tar bort marginalen till vänster */
+  .inlineHeader{
+    margin-left: 0;
+  }
+  
+  /* sätter listans start till vänster*/
+  .analysUl{
+    padding-inline-start: 0;
+    width: 90%;
+    font-size: 60%;
+  }
+  
 }

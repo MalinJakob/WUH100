@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!--utvalda språket för sidan är engelska-->
 <html lang="en">
   <!-- meta tags för att tillhandahålla information om datan angående webbplatsen och länkar till stilmallar-->
   <head>
@@ -24,8 +25,9 @@
     <!-- allt innehåll på sidan finns under ett div element (Wrapper) för att lättare kunna 
    stilsätta huvudinnehållet. -->
     <div class="wrapper">
-     <!--  sidhuvud med företagets logga, med en bild och formatet PNG eftersom det är en logga och en huvudmenyn -->
+     <!--  sidhuvud med företagets logga och en huvudmenyn -->
       <header class="mainHeader">
+      <!--bild element med en bild med formatet PNG eftersom det är en logga, med en beskrivande alt-attribut-->
         <img
           id="logo"
           src="images/LogotypSlopesProduction.png"
@@ -34,7 +36,7 @@
         />
         <!--navigationsmeny, skapad med en ostruturerad lista där varje
         element har en anchor som antigen har en relativ länk till en sida på webbplatsen 
-        eller en id target -->
+        eller en id target som destination-->
         <nav>
           <ul>
             <li><a href="index.html">HOME</a></li>
@@ -58,7 +60,7 @@
           <header>
             <h1>SLOPES</h1>
           </header>
-          <!-- information text om företaget, en introduktion-->
+          <!-- informations text om företaget-->
           <p>
             At Slopes Productions, we’re passionate about fueling your
             adventures on the slopes. Whether you’re carving down pristine
@@ -71,16 +73,20 @@
             conquer the slopes with us—because the mountains are calling!
           </p>
         </section>
-        <!-- andra sektionen är en översikt över vilka produkter som finns på sidan
+        <!-- andra sektionen är en översikt över vilka produkter som finns på sidan,
          uppdelat i mindre sektioner där varje sektion är utrustad med en egen bild, rubrik, text 
          och knapp för att samla innehållet på en gemensam yta för att sedan kunna placera 
          varje mindre sektion brevid varandra-->
         <section id="mainProductSection">
+          <!--första mindre sektionen med en klass för att enkelt dela upp innehållet samt ett id för att 
+          använda det vid placering i grid areas i stilmallen-->
           <section class="main-section" id="section1">
+            <!--bild element med en beskrivande text i alt-attributet för att öka tillgängligheten-->
             <img
               src="images/googles.jpg"
               alt="Close-up of a blue ski gondola carrying multiple colorful skis on a rack, with snow-capped mountains and a clear blue sky in the background."
             />
+            <!-- huvudrubriken för produkten-->
             <h2>Goggles</h2>
             <!-- kort information om produkten-->
             <p>
@@ -89,9 +95,9 @@
               shapes, colors and design!
             </p>
             <div class="productButton">
-              <!-- varje knapp har en anchor tagg för att kunna ge knappen en väg att gå
-               om den blir tryckt, man scrollas automatiskt ner till motsvarande id längre 
-               ner på sidan-->
+              <!-- varje knapp har ett anchor element för att kunna ge knappen en destination 
+               om den blir tryckt, i detta fall scrollas automatiskt man ner till motsvarande 
+               id längre ner på sidan-->
               <a href="#scrollTarget1">See more</a>
             </div>
           </section>
@@ -145,21 +151,25 @@
           </section>
         </section>
         <!-- Tredje stora sektionen är relaterade innehåll kopplat till produkterna som säljs på sidan.
-          Allt innehåll i sektionen är uppdelat i mindre div lådor  -->
+          Allt innehåll i sektionen är uppdelat i mindre div element  -->
         <section>
           <!-- har en egen header och rubrik för attt visa att det är en ny samling av relaterade innehåll-->
           <header id="productMainHeader">
-            <!-- yttligare en scroll target har angivits för att från huvudmenyn kunna enkelt ta sig hit på ett knapptryck-->
+            <!-- yttligare ett target id har angivits för att från huvudmenyn kunna enkelt ta sig hit på ett knapptryck-->
             <h1 class="scrollTarget" id="scrollTargetProduct">PRODUCTS</h1>
           </header>
-          <!-- Varje div låda är indelat i 3st artiklar-->
+          <!-- Varje div element är indelat i 3st artiklar och har en klass för att dela upp innehållet på elementet
+           i stilmallen på ett ställe eftersom upplägget upprepas för alla huvudprdukter -->
           <div class="productContainer">
             <!-- Varje artikel är indelat bild, två rubriker och en knapp. Informationen hade kunnat vara fristående
              och tillsammans bildar all information inom artikeln informationen om den produkten. Allt är samlat för 
-             att kunna ge en helhets bild av produkten. Varje första artikel i sektionen har ett eget scroll target id som 
+             att kunna ge en helhets bild av produkten. Varje första artikel i sektionen har ett eget target id som 
              är kopplat till knappen som finns i de olika sektionerna i produkt översikten -->
+             
+             <!--varje artikel i denna del har två klasser, en för att dela upp innehålet och en för att 
+             applicera samma beteende på den automatiska scrollningen och sedan ett id som är en scroll destination -->
             <article class="product scrollTarget" id="scrollTarget1">
-            <!-- Bild tagg med en utrfölig alt text för att öka tillgängligheten-->
+            <!--bild element med en beskrivande text i alt-attributet för att öka tillgängligheten-->
               <img
                 src="images/goggles1.jpg"
                 alt="Person wearing a black hoodie and orange ski goggles in the snow."
@@ -170,6 +180,7 @@
               <!-- en knapp för att kunna köpa produkten, har ingen destination för tillfället-->
               <button class="buyButton">Buy</button>
             </article>
+            <!-- varje artikel fungerar samma sätt som beskrivet ovan-->
             <article class="product">
               <img
                 src="images/goggles2.jpg"
@@ -189,7 +200,7 @@
               <button class="buyButton">Buy</button>
             </article>
           </div>
-          <!-- Varje div låda fungerar på samma sätt som nämn ovan för att skapa en enhetlig bild -->
+          <!-- Varje div element fungerar på samma sätt som nämn ovan för att skapa en enhetlig bild -->
           <div class="productContainer">
             <article class="product scrollTarget"  id="scrollTarget2">
               <img
@@ -219,7 +230,7 @@
               <button class="buyButton">Buy</button>
             </article>
           </div>
-          <!-- Varje div låda fungerar på samma sätt som nämn ovan för att skapa en enhetlig bild -->
+          <!-- Varje div element fungerar på samma sätt som nämn ovan för att skapa en enhetlig bild -->
           <div class="productContainer">
             <article class="product scrollTarget" id="scrollTarget3">
               <img
@@ -249,7 +260,7 @@
               <button class="buyButton">Buy</button>
             </article>
           </div>
-          <!-- Varje div låda fungerar på samma sätt som nämn ovan för att skapa en enhetlig bild -->
+          <!-- Varje div element fungerar på samma sätt som nämn ovan för att skapa en enhetlig bild -->
           <div class="productContainer">
             <article class="product scrollTarget" id="scrollTarget4">
               <img
@@ -277,8 +288,8 @@
             </article>
           </div>
         </section>
-        <!-- Fjärde sektionen är informationen som behövs för att skapa information och möjlighet 
-         att prenumerera till företagets nyhetsbrev -->
+        <!-- Fjärde sektionen är informationen om nyhetsbrev och en möjlighet 
+         att prenumerera till företagets nyhetsbrev med hjälp av form elementet -->
         <section id="newsletter">
           <!-- egen header med nyhetsbrevets rubrik -->
           <header id="labelNewsletter">
@@ -300,15 +311,18 @@
               <input type="text" required name="name" id="name" />
               <label for="email">Email</label>
               <input type="email" required name="email" id="email" />
+              <!-- en input som är i typen submit för att skapa en skicka knapp, för 
+               att formuläret ska skickas, formuläret har ingen desttination för tillfället-->
               <input type="submit" name="submit" id="submit" value="Send"/>
             </fieldset>
           </form>
         </section>
       </main>
-      <!-- Footern på sidan som är indelad i 3 sektioner och en div låda, varje sektion har ett id som 
-       sedan är kopplar till grid area i stilmallen-->
+      <!-- Footern på sidan som är indelad i 3 sektioner och ett div element, varje sektion/div element har ett id som 
+       sedan är kopplar till vilken plats i grid area den ska placeras i stilmallen-->
       <footer>
-        <!-- första sektionen är all information kopplat till kontakt information-->
+        <!-- första sektionen är all information kopplat till kontakt information med ett eget id, som 
+         kommer anävndas som scroll target och placering i grid areas i stilmallen-->
         <section id="f-section1">
           <!-- allt innehåll kring kontakt infon är samlat här, i en paragraf & rubrik
            för att skapa enklare struktur/stil på informationen-->
@@ -318,8 +332,9 @@
             <p>Email: info@slopesproduction.com</p>
             <p>Hours: Mon-Sat 8AM-8PM MST, Sun 9AM-6PM MST</p>
         </section>
-        <!--andra sektionen är en vertikal naavigationsbar, i form av ostrukurerad lista me dlist items, där varje
-        list item har en anchor tag till en relativlänk, id target eller inget. -->
+        <!--andra sektionen är en vertikal navigationsbar, i form av ostrukurerad lista med list element, där varje
+        list item har en anchor tag till en relativlänk eller ett id target. Har ett eget id som 
+         kommer användas som scroll target och placering i grid areas i stilmallen -->
         <section id="f-section2">
           <h4>Navigation</h4>
           <nav class="footer-nav">
@@ -327,11 +342,12 @@
               <li><a href="index.html">HOME</a></li>
               <li><a href="analys.html">ANALYS</a></li>
               <li><a href="#scrollTargetProduct">PRODUCTS</a></li>
-              <li><a href="#">CONTACT</a></li>
+              <li><a href="#f-section1">CONTACT</a></li>
             </ul>
           </nav>
         </section>
-        <!-- tredje sektionen är kort information kring företaget, med egen rubrik och paragraf-->
+        <!-- tredje sektionen är kort information kring företaget, med egen rubrik och paragraf.
+         Har ett eget id som kommer användas som scroll target och placering i grid areas i stilmallen-->
         <section id="f-section3">
           <h4>About Slopes Production</h4>
           <p>
@@ -341,8 +357,9 @@
             snowboarding and skiing gear.
           </p>
         </section>
-        <!-- Div lådan är sociala media iconer och vart de länkar till. En div låda
-         eftersom det är innehåll utan rubrik -->
+        <!-- Div element med sociala media iconer och vart de länkar till. Ett div element
+         eftersom det är innehåll utan rubrik. Har ett eget id som kommer användas som scroll
+          target och placering i grid areas i stilmallen--->
         <div id="f-section4" class="social-media social-media-icons">
           <a
             href="https://www.facebook.com"
