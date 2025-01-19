@@ -69,7 +69,7 @@ p{
   width: 90%;
 }
  
-/*flex systemet för att skapa placeringenn på huvudmenyn, samt en fast höjd för att
+/*flexbox systemet för att skapa placeringenn på huvudmenyn, samt en fast höjd för att
 inte menyn ska skalas upp för stort */
 .mainHeader{
   display: flex;
@@ -126,8 +126,48 @@ header nav ul li a:hover{
   color: antiquewhite;
 }
 
+/*centera huvudinehållet på annalys sidan*/
 #analysMain{
-  justify-items: left;
+  display: grid;
+  justify-self: center;
+  width: 70%;
+  border: 3px dotted #e585b0;
+  padding: 3em;
+}
+
+/*centerar huvudrubriken på annalys sidan*/
+#analysHeader{
+  display: grid;
+  justify-self: center;
+}
+
+/* sätter artikel till start/vänster på analys sidan*/
+#analysArticle{
+  justify-items: start;
+}
+
+/* sätter paragraf till start/vänster på analys sidan med en marginal för att 
+skapa ett indrag och ökar textstorleken så att den blir mer läsbar*/
+#analysArticle p{
+  text-align: start;
+  margin-left: 1.5em;
+  font-size: 120%;
+}
+
+/* tilldelar egen färg till underrubirker */
+.inlineHeader{
+  color:#2d95c9e2;
+  margin-left: 0.7em ;
+}
+
+/* sätter listans start till vänster*/
+.analysUl{
+  text-align: left;
+}
+
+/* sätter marginal för att skapa ett mellanrum mellan varje referens*/
+.analysUl li{
+  margin: 1em;
 }
 
 /*grid för att centrera sökfältet i mitten av sidan tillsammans med marginaler */
@@ -447,7 +487,7 @@ efterlikna huvudmenyn mer och skapa andrum, och sätta samma font som i huvudrub
   text-align: center;
 }
 
-/*flex system för att centera sociala media iconerna i mitten och med ett
+/*flexbox system för att centera sociala media iconerna i mitten och med ett
 exakt mellanrum som fungerar i alla skärmstorlekar, en marginal ovan för att
 skapa ett större andrum för att skapa illussionen att dem inte riktigt hör samman 
 i de andra delar och sitter mer mot botten av footern, magrinal nedanför för att 
@@ -529,9 +569,9 @@ iconen i mitten av cirkeln  */
 }
 
 /*media queries för responsiv design*/
-/* sätter en maxbredd på innehållet till 1300px med ett mellanrum mellan 
+/* sätter en maxbredd på innehållet till 1366px med ett mellanrum mellan 
 skärrmens kant och innehållet på sidan */
-@media (max-width: 1300px) {
+@media (max-width: 1366px) {
   .wrapper {
     width: 100%;
     padding: 1em;          

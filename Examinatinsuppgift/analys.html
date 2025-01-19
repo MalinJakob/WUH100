@@ -24,7 +24,7 @@
     <!-- allt innehåll på sidan finns under en div låda (Wrapper)  för att lättare kunna 
    stilsätta huvudinnehållet. -->
     <div class="wrapper">
-     <!--  header med företagets logga, med en bild och formatet PNG eftersom det är en logga och en huvudmenyn -->
+      <!--  header med företagets logga, med en bild och formatet PNG eftersom det är en logga och en huvudmenyn -->
       <header class="mainHeader">
         <img
           id="logo"
@@ -45,10 +45,301 @@
         </nav>
       </header>
       <main id="analysMain">
-        <header>
-          <h1>Analys</h1>
-        </header>
-        <h2 class="analysHeader"> Inledning</h2>
+        <article id="analysArticle">
+          <header id="analysHeader">
+            <h1>Analystext av Malin Jakob</h1>
+            <h3>
+              Examinationsuppgift - Webbutveckling med HTML & CSS - WUH100
+            </h3>
+            <h4>2025-01-19</h4>
+          </header>
+          <h2>Inledning</h2>
+          <p>
+            Examinationsuppgiften gick ut på att skapa en produktsida för en
+            webbshop. Jag hade frihet att utforma design och struktur, men en
+            mall fanns som vägledning. Målet var att skapa en korrekt
+            strukturerad webbplats med passande taggar och god HTML- och CSS-kod
+            enligt webbstandarder.
+          </p>
+          <h2>Programmeringsval</h2>
+          <p>
+            De flesta programmeringsval jag gjorde uppstod när jag arbetade med
+            CSS-koden eftersom de semantiska taggarna i HTML5 skapar ett smidigt
+            arbetssätt för att skapa en funktionell och tillgänglig webbplats.
+            Semantiska taggar gör webbplatser mer tillgängliga för personer med
+            olika behov eftersom det hjälper dem att interagera lättare med
+            webbplatser (GeeksForGeeks, 2024).
+          </p>
+          <h3 class="inlineHeader">HTML5</h3>
+          <p>
+            Innehållet på webbplatsen placerades under semantiska taggar, med
+            några undantag där div-element användes för att skapa struktur när
+            specifika rubriker saknades.
+          </p>
+          <h3 class="inlineHeader">CSS-reset</h3>
+          <p>
+            Jag använde en CSS Normalizer-reset från cdnjs (2025) för att
+            säkerställa en enhetlig utgångspunkt. Detta placerades överst bland
+            läkarna i HTML-filen för att förhindra att min egen stilmall
+            återställdes.
+          </p>
+          <h3 class="inlineHeader">Box-model</h3>
+          <p>
+            Jag använde box-sizing: border-box i wrappern, som inkluderar allt
+            innehåll på sidan, för att inkludera padding och border i den totala
+            höjden och bredden på elementen. Enligt MDN Web Docs (2024) är det
+            en vanlig metod bland utvecklare idag för att förenkla arbetet med
+            designen.
+          </p>
+          <h3 class="inlineHeader">Enheter</h3>
+          <p>
+            Jag använde främst relativa mått (%, em, vw) och kompletterade med
+            px där exakta mått krävdes. Enligt W3Schools (n.d.) är em lämpligt
+            för skalbar design, vilket jag håller med om och gillar att använda
+            som mått till padding och margin. Enligt freeCodeCamp (2024)
+            förklarar dem att använda sig av måttenheten em för padding och
+            margin är rekommenderat, eftersom den justeras efter textstorleken
+            av föräldrar elementet. Vilket skapar en konsekvent design, layouten
+            blir mer flexibel och anpassningsbar samt kan element skala
+            proportionerligt. <br /><br />
+            Relativa måtten procent och vw har jag mest använt som enhet till
+            längd och bredd på en bild, text eller något annat liknande element
+            som behöver skalas relativt efter skärmstorleken. Speciellt
+            användbart när man vill att ett element ska ta upp en viss mängd
+            inom dess förälder element, vilket freeCodeCamp (2024) förespråkar.
+            Absoluta mått som px användes för konstanta värden som vid en
+            brytpunkt, minimum längd/höjd på ett element , eller kopplat till
+            stilval som inte berörs av att det behöver vara skalbara. Exempel på
+            detta är border, box-shadow och border-radius, eftersom jag vill att
+            dessa ska vara konstanta.
+          </p>
+          <h2>Layout</h2>
+          <p>
+            Jag valde att använda CSS Grid som layoutmodell men övergick till
+            Flexbox vissa val där Grids inte fungerade som önskat.
+          </p>
+          <h3 class="inlineHeader">Navigation</h3>
+          <p>
+            Navigationslänkarna ligger i ett nav-element med en ostrukturerad
+            lista med list element, där varje list element har en anchor (a)
+            element i med antingen en relativ länk, id target eller tom
+            destination. Enligt McGrath (2024) ska man omge sina navigations
+            länkar i ett nav element och eftersom nav elementet inte ger någon
+            struktur, valde jag att skapa strukturen som nämnt ovan. Enligt
+            W3Schools. (u.å) illustrerar de att en vanlig navigationsbar är
+            strukturerad på detta sätt. <br /><br />
+            Huvudnavigationen är placerad högst upp på sidan eftersom detta är
+            en vanlig placering och ger därmed en igenkänningseffekt, som kan
+            underlätta för användare att navigera på webbplatsen. 21 Designs.
+            (2020) förklarar att majoriteten av besökarna av en webbplats
+            förväntar sig att huvudmenyn ska vara horisontellt högst uppe på
+            webbplatsen. Vilket bidrar till att webbplatsen blir enklare att
+            använda.
+          </p>
+          <h3 class="inlineHeader">Sidfot</h3>
+          <p>
+            Sidfotens upplägg är utformat i tre kolumner och två rader där den
+            andra raden tar upp hela längden. Valet att placera innehållet i
+            footern på detta sätt var i inspiration av olika footers synliga på
+            webben och vilken information jag ansåg var viktigt att visa där.
+            Jag valde att prioritera kontaktinformation, vertikal navigation,
+            information om företaget och sedan länkar till sociala medier.
+            <br /><br />Utifrån en artikel från Medium förklarar skribenten
+            (WebKeyz , 2019) olika kriterier den anser vara viktig för att skapa
+            en “perfekt footer”. Skribenten nämner att designern som skapar
+            footern måste ta användarna i beaktning och vilken information som
+            de skulle behöva om de hamnar längst ner på sidan. Utöver det radar
+            skribenten upp olika saker kan vara smart att ha i en footer och där
+            nämner skribenten att navigationslänkar kan vara den mest nödvändiga
+            komponenten i sin foooter. Eftersom om en besökare är längst ner på
+            sidan och ska kunna ta sig vidare utan att behöva scrolla upp hela
+            vägen till toppen av sidan. En annan del som ansågs vara viktig var
+            kontaktinformation och sociala media ikoner. Skribenten förklarar
+            att sociala media ikoner i en footer är en naturlig förlängning av
+            upplevelsen.
+          </p>
+          <h3 class="inlineHeader">CSS-grids</h3>
+          <p>
+            CSS grids är den layoutmodell jag föredrar eftersom jag är mer
+            bekväm att designa utifrån detta system. Personligen upplever jag
+            att CSS grids är ett enkelt och systematiskt system som skapar en
+            funktionell och snygg layout. I detta arbete valde jag att kombinera
+            grid templates columns och grid areas. Jag har inte arbetat länge
+            med grid areas så jag valde att använda det på utvalda ställen som
+            jag var bekväm med utifrån tidigare projekt. Dessa valda områden var
+            en del av huvudinnehållet, översikten av produkterna, och sedan i
+            footern. Utöver detta använde jag mig av grid templates columns i
+            resten av huvudinnehållet.
+          </p>
+          <h3 class="inlineHeader">Flexbox</h3>
+          <p>
+            Jag försökte att skapa min header med hjälp av CSS grids men det
+            fungerade inte. Efter många försök med CSS Grids testade jag att
+            använda mig av flexbox istället och det löste problemet. Vid
+            användning av grids ville inte menylänkarna och loggan stanna längst
+            ut på sidorna. Genom att använda mig av flexbox löstes problemet
+            enkelt. MDN Web Docs (2024) förklarar att flexbox är den rätta
+            layout lösningen om man vill designa en kollektion av föremål i en
+            dimension eller kontrollera mellanrummet mellan föremål. Det var
+            precis detta jag inte kunde lösa med hjälp av grids och som nämnts
+            ovan passar flexbox bättre för att lösa detta problem. Jag möttes av
+            samma problem i min footer, i den sista raden i min grid area.
+            Användningen av flexbox löste problemet att horisontellt fördela
+            sociala media ikoner i mitten av footern och att de skulle placeras
+            närmare varandra med ett specifikt avstånd.
+          </p>
+          <h3 class="inlineHeader">Läsbarhet</h3>
+          <p>
+            För att öka läsbarheten använde jag färger med hög kontrast ratio,
+            flexibel textskalning, ökad linjehöjd samt att centrera och skala av
+            texten procentuellt utifrån sidans storlek så att textens rader inte
+            blir för långa.
+          </p>
+          <h2>Responsiv design</h2>
+          <p>
+            Enligt McGrath (2020) illustrerar de hur man kan tänka när det
+            kommer till responsiv design och hur man borde placera sin header,
+            menu, footer och aside vid olika skärmstorlekar. Jag följde detta,
+            med en header med menu högst upp, huvudinnehållet i mitten och
+            footer längst ner. Denna layout ändras inte i olika skärmstorlekar
+            utan det är innehållet i de olika delarna som justeras. <br /><br />
+            Jag valde att använda mig av en maxbredd på 1366px och sedan en
+            brytpunkt vid 1024px och 768px utifrån en guide (Kinsta, 2023) som
+            gav förslag på vanliga brytpunkter. Det fanns olika punkter att
+            välja mellan och jag valde att utgå från bärbara datorer,
+            surfplattor och sedan mobilskärmar som är 768px och neråt. Att
+            endast ha tre punkter att utgå från beslutades genom att arbeta i
+            Inspektera verktyget och labba med hur innehållet betedde sig när
+            skärmen blev mindre och större.
+          </p>
+          <h2>Bildoptimering</h2>
+          <p>
+            Bilder optimerades i verktyget GIMP. Majoriteten av bilderna har
+            formatet JPEG, eftersom enligt Sejdeborn (2024) är JPEG det optimala
+            bildformatet för webben. JPEG-komprimeringen håller ner filstorleken
+            utan att man förlorar för mycket kvalitet, vilket i sin tur gör att
+            bilderna kan laddas in snabbare. För att öka optimeringen sänktes
+            kvalitetsinställningen till 80, för att kunna minska storleken mer
+            utan att det ska utgöra en märkbar kvalitetsförlust. För att minska
+            filstorleken ytterligare har jag valt att inte spara Exif-data,
+            XMP-data, miniatyrbild och färgprofil. Jag valde att använda mig av
+            progressiv, vilket gör att bilden laddas uppifrån och ned. Detta
+            betyder att bilderna laddas upp på sidan direkt och successivt
+            förbättra sin kvalitet. <br /><br />En bild på sidan är i formatet
+            PNG, vilket är loggan på hemsidan. Enligt Sejdeborn (2024) passar
+            formatet PNG till bilder som har en enkel grafik med få färger,
+            precis som loggan till företaget har. Till denna bild har jag valt
+            RGB med 8-bitar som bitdjup tillsammans med en sammanflätning för
+            att på samma sätt ladda in bilden direkt och att den successivt ökar
+            i kvalitet.
+          </p>
+          <h2>Kompatibilitet</h2>
+          <p>
+            Genom att kolla igenom olika delar av min kod via hemsidan caniuse
+            (u.å) flaggar det för att CSS grids inte har understöd i webbläsaren
+            Opera Mini. Det har inte varit ett medvetet val att exkludera
+            användare som använder Opera Mini utan har blivit så på grund av
+            okunskap. På min webbplats har jag använt mig av scroll-behavior,
+            som inte är kompatibelt med Opera Mini eller IE (caniuse, u.å),
+            vilket i sig inte gör någon stor skillnad utan beteendet kan falla
+            tillbaka på standardinställningar och dessa besökare missar inget
+            väsentligt.
+          </p>
+          <h2>Sammanfattning</h2>
+          <p>
+            Sammanfattningsvis har arbetet gått smidigt, med några utmaningar
+            som gav värdefulla lärdomar. De största problemen uppstod när jag
+            försökte använda CSS Grids för huvudmenyn och en del av footern.
+            Efter flera försök bytte jag till flexbox, vilket löste problemen
+            effektivt. Denna erfarenhet har stärkt min förståelse för när olika
+            layoutmodeller är mest användbara. CSS Grids var i övrigt enkelt att
+            arbeta med för att skapa en strukturerad layout, vilket underlättar
+            anpassningen till responsiv design. HTML-strukturen med semantiska
+            taggar gav en tydlig grund och förbättrade både tillgängligheten och
+            användarupplevelsen. När problem har uppstått har jag systematiskt
+            försökt lösa detta och upplever att min webbplats inte har någon
+            specifik felaktighet, men detta är endast utifrån min egen kunskap
+            där jag gärna lär mig mer om det finns förbättringspotential.
+            Projektet har varit lärorikt och gett mig insikter som jag kan
+            använda i framtida arbete.
+          </p>
+          <h2>Referenser</h2>
+          <h3 class="inlineHeader">Webbplatser</h3>
+          <ul class="analysUl">
+            <li>
+              21 Designs. (6 januari 2020). Why are main menus at the top of the
+              page? 21 Designs.
+              https://21designs.com.au/learn/designer-tips/why-are-main-menus-at-the-top-of-the-page/
+            </li>
+            <li>
+              Can I use. (u.å.). CSSFlexbox. Can I use.
+              https://caniuse.com/flexbox
+            </li>
+            <li>
+              Can I use. (u.å.). CSS grid. Can I use.
+              https://caniuse.com/css-grid
+            </li>
+            <li>
+              Can I use. (u.å.). CSS Scroll-behavior. Can I use.
+              https://caniuse.com/?search=scroll-behavior
+            </li>
+            <li>
+              cdnjs (2025). normalize Normalize.css as a node packaged module.
+              https://cdnjs.com/
+            </li>
+            <li>
+              freeCodeCamp. (25 januari 2024.). CSS Units: When to use each one.
+              freeCodeCamp.
+              https://www.freecodecamp.org/news/css-units-when-to-use-each-one/#heading-em-em
+            </li>
+            <li>
+              GeeksforGeek. (10 januari 2023). HTML5 | Introduktion.
+              GeeksforGeeks. https://www.geeksforgeeks.org/html5-introduction/
+            </li>
+            <li>
+              GeeksForGeeks (2 december 2024). HTML5 semantik. GeeksforGeeks.
+              https://www.geeksforgeeks.org/html5-semantics/?ref=header_outind
+            </li>
+            <li>
+              Kinsta. (19 januari 2023 ). Responsiv webdesign: En komplett guide
+              för 2023. Kinsta. https://kinsta.com/se/blog/responsiv-webdesign/
+            </li>
+            <li>
+              MDN Web Docs. (19 december 2024). Box model. MDN Web Docs.
+              https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model
+            </li>
+            <li>
+              MDN Web Docs (7 november 2024.). Typical use cases of flexbox. MDN
+              Web Docs.
+              https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox
+            </li>
+            <li>
+              Sejdeborn, Anders. (3 maj 2024). Så väljer du rätt filformat för
+              webben. Moderskeppet.
+              https://moderskeppet.se/live/sa-valjer-du-ratt-filformat-for-webben/
+            </li>
+            <li>
+              W3Schools. (u.å). CSS Navbar. W3Schools.
+              https://www.w3schools.com/css/css_navbar.asp
+            </li>
+            <li>
+              W3Schools. (u.å). CSS Units. W3Schools.
+              https://www.w3schools.com/cssref/css_units.php
+            </li>
+            <li>
+              WebKeyz. (22 juli 2019). A detailed guide to website footers.
+              Medium.
+              https://medium.com/@webkeyz/a-detailed-guide-to-website-footers-29241b533cfb
+            </li>
+          </ul>
+          <h3 class="inlineHeader">Böcker</h3>
+          <ul>
+            <li>
+              McGrath, Mike. 2020. HTML, CSS and JavaScript in easy steps. (4
+              uppl.). in Easy Steps Limited.
+            </li>
+          </ul>
+        </article>
       </main>
       <!-- Footern på sidan som är indelad i 3 sektioner och en div låda, varje sektion har ett id som 
        sedan är kopplar till grid area i stilmallen-->
@@ -57,11 +348,11 @@
         <section id="f-section1">
           <!-- allt innehåll kring kontakt infon är samlat här, i en paragraf & rubrik
            för att skapa enklare struktur/stil på informationen-->
-            <h4>Contact Us</h4>
-            <p>Main Store: 1234 Mountain View Drive, Aspen, CO 81611</p>
-            <p>Customer Service: 1-800-SLOPES-PRO</p>
-            <p>Email: info@slopesproduction.com</p>
-            <p>Hours: Mon-Sat 8AM-8PM MST, Sun 9AM-6PM MST</p>
+          <h4>Contact Us</h4>
+          <p>Main Store: 1234 Mountain View Drive, Aspen, CO 81611</p>
+          <p>Customer Service: 1-800-SLOPES-PRO</p>
+          <p>Email: info@slopesproduction.com</p>
+          <p>Hours: Mon-Sat 8AM-8PM MST, Sun 9AM-6PM MST</p>
         </section>
         <!--andra sektionen är en vertikal naavigationsbar, i form av ostrukurerad lista me dlist items, där varje
         list item har en anchor tag till en relativlänk, id target eller inget. -->
